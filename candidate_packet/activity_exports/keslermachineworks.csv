@@ -1,0 +1,62 @@
+run_id,user_email,agent_name,question_text,run_status,run_duration_sec,output_snippet,timestamp
+r12-0000001,khaddad@keslermachineworks.com,Journal Entry Reviewer,Explain the headcount variance vs plan,completed,43.9,"Treasury Jan variance was $1,649,799 vs plan",2026-03-01T09:02:03Z
+r12-0000002,wrodriguez@keslermachineworks.com,Vendor Spend Analyzer,Why did Treasury spend exceed budget in Mar?,completed,47.4,"Treasury Mar variance was $3,953,207 vs plan",2026-03-02T10:55:57Z
+r12-0000003,wrodriguez@keslermachineworks.com,Variance Explainer,What drove the change in gross margin this quarter?,completed,23.5,"FP&A Mar variance was $4,316,197 vs plan",2026-03-03T11:06:54Z
+r12-0000004,wrodriguez@keslermachineworks.com,Journal Entry Reviewer,Check covenant compliance for the revolver,completed,42.6,"FP&A Feb variance was $254,264 vs plan",2026-03-03T15:15:11Z
+r12-0000005,wrodriguez@keslermachineworks.com,Covenant Checker,Forecast Apr operating cash flow,completed,61.6,"Treasury Apr variance was $1,041,120 vs plan",2026-03-04T09:15:59Z
+r12-0000006,khaddad@keslermachineworks.com,Headcount Planner,Forecast Jan operating cash flow,completed,68.1,"Treasury Jan variance was $1,849,038 vs plan",2026-03-06T15:46:35Z
+r12-0000007,khaddad@keslermachineworks.com,Board Deck Builder,Why did FP&A spend exceed budget in Mar?,completed,38.8,"FP&A Mar variance was $2,183,422 vs plan",2026-03-07T12:30:28Z
+r12-0000008,wrodriguez@keslermachineworks.com,Journal Entry Reviewer,Forecast May operating cash flow,completed,74.2,"FP&A May variance was $1,702,953 vs plan",2026-03-09T13:21:45Z
+r12-0000009,khaddad@keslermachineworks.com,Close Checklist Bot,Summarize the Mar variance for entity EU-09,completed,23.9,"Ops Mar variance was $280,501 vs plan",2026-03-10T09:17:33Z
+r12-0000010,khaddad@keslermachineworks.com,AP Aging Analyst,Draft flux commentary for the Mar close,completed,65.6,"Ops Mar variance was $3,014,528 vs plan",2026-03-17T16:14:13Z
+r12-0000011,khaddad@keslermachineworks.com,AP Aging Analyst,Build the board deck cash slide for Feb,completed,49.0,"Treasury Feb variance was $600,198 vs plan",2026-03-18T07:21:33Z
+r12-0000012,khaddad@keslermachineworks.com,AP Aging Analyst,Summarize the Jan variance for entity US-05,completed,73.4,"Ops Jan variance was $3,412,400 vs plan",2026-03-19T13:29:00Z
+r12-0000013,khaddad@keslermachineworks.com,Flux Commentary,Explain the headcount variance vs plan,completed,37.0,"Treasury Apr variance was $4,239,110 vs plan",2026-03-20T11:14:29Z
+r12-0000014,khaddad@keslermachineworks.com,Journal Entry Reviewer,What drove the change in gross margin this quarter?,completed,34.3,"Accounting May variance was $1,439,287 vs plan",2026-03-24T13:53:22Z
+r12-0000015,wrodriguez@keslermachineworks.com,Revenue Recognizer,Explain the headcount variance vs plan,completed,23.2,"Treasury May variance was $3,012,740 vs plan",2026-03-31T13:08:59Z
+r12-0000016,khaddad@keslermachineworks.com,Headcount Planner,Why did FP&A spend exceed budget in May?,completed,58.8,"FP&A May variance was $971,614 vs plan",2026-04-01T15:39:38Z
+r12-0000017,khaddad@keslermachineworks.com,Close Checklist Bot,Build the board deck cash slide for Mar,completed,33.9,"Accounting Mar variance was $1,653,224 vs plan",2026-04-07T14:49:43Z
+r12-0000018,khaddad@keslermachineworks.com,Board Deck Builder,Forecast Jun operating cash flow,completed,46.4,"Treasury Jun variance was $4,684,752 vs plan",2026-04-14T18:21:27Z
+r12-0000019,khaddad@keslermachineworks.com,Flux Commentary,What drove the change in gross margin this quarter?,completed,41.5,"Ops Mar variance was $1,488,898 vs plan",2026-04-14T06:30:20Z
+r12-0000020,khaddad@keslermachineworks.com,Close Checklist Bot,Check covenant compliance for the revolver,completed,43.9,"Treasury Jun variance was $2,744,518 vs plan",2026-04-14T13:44:48Z
+r12-0000021,wrodriguez@keslermachineworks.com,Revenue Recognizer,Draft flux commentary for the Feb close,completed,4.7,"FP&A Feb variance was $3,793,745 vs plan",2026-04-15T17:26:12Z
+r12-0000022,wrodriguez@keslermachineworks.com,Covenant Checker,Check covenant compliance for the revolver,completed,8.9,"FP&A Apr variance was $2,969,623 vs plan",2026-04-16T17:00:45Z
+r12-0000023,wrodriguez@keslermachineworks.com,Vendor Spend Analyzer,Summarize the Feb variance for entity MX-08,completed,14.1,"Ops Feb variance was $259,895 vs plan",2026-04-16T13:32:06Z
+r12-0000024,khaddad@keslermachineworks.com,Covenant Checker,Explain the headcount variance vs plan,completed,0.7,Traceback (most recent call last): KeyError 'entity',2026-04-22T16:08:48Z
+r12-0000025,khaddad@keslermachineworks.com,Revenue Recognizer,Summarize the Mar variance for entity CA-04,completed,70.2,"Ops Mar variance was $1,279,633 vs plan",2026-04-27T17:32:49Z
+r12-0000026,wrodriguez@keslermachineworks.com,Vendor Spend Analyzer,Which cost centers are over budget YTD?,completed,62.3,"Accounting Mar variance was $4,476,181 vs plan",2026-04-27T18:17:32Z
+r12-0000027,khaddad@keslermachineworks.com,Covenant Checker,Which cost centers are over budget YTD?,completed,12.8,"FP&A May variance was $2,609,878 vs plan",2026-04-28T07:40:57Z
+r12-0000028,wrodriguez@keslermachineworks.com,Covenant Checker,Which cost centers are over budget YTD?,completed,69.7,"Ops Jan variance was $3,008,216 vs plan",2026-04-30T11:42:16Z
+r12-0000029,wrodriguez@keslermachineworks.com,Journal Entry Reviewer,Which cost centers are over budget YTD?,completed,49.2,"Accounting Apr variance was $2,107,448 vs plan",2026-05-01T10:51:40Z
+r12-0000030,wrodriguez@keslermachineworks.com,Vendor Spend Analyzer,Summarize the Jan variance for entity EU-06,completed,7.5,"Treasury Jan variance was $2,195,602 vs plan",2026-05-02T17:34:10Z
+r12-0000031,wrodriguez@keslermachineworks.com,Board Deck Builder,Draft flux commentary for the Jun close,completed,58.1,"Ops Jun variance was $4,655,638 vs plan",2026-05-06T14:47:59Z
+r12-0000032,khaddad@keslermachineworks.com,Vendor Spend Analyzer,Forecast Feb operating cash flow,completed,66.2,"FP&A Feb variance was $4,367,610 vs plan",2026-05-06T13:10:46Z
+r12-0000033,khaddad@keslermachineworks.com,AP Aging Analyst,Build the board deck cash slide for May,completed,62.6,"Treasury May variance was $3,841,797 vs plan",2026-05-12T11:01:28Z
+r12-0000034,wrodriguez@keslermachineworks.com,Vendor Spend Analyzer,Summarize the Mar variance for entity MX-06,completed,11.0,"FP&A Mar variance was $3,517,775 vs plan",2026-05-12T13:21:08Z
+r12-0000035,khaddad@keslermachineworks.com,Covenant Checker,Build the board deck cash slide for Feb,completed,53.5,"Ops Feb variance was $412,228 vs plan",2026-05-15T09:34:52Z
+r12-0000036,wrodriguez@keslermachineworks.com,Variance Explainer,Reconcile AP aging over 90 days for MX-07,completed,61.8,"Treasury Mar variance was $2,233,048 vs plan",2026-05-15T13:32:52Z
+r12-0000037,khaddad@keslermachineworks.com,Journal Entry Reviewer,Why did Ops spend exceed budget in Mar?,completed,0.9,FAILED: null reference in aggregation step,2026-05-19T12:05:29Z
+r12-0000038,khaddad@keslermachineworks.com,Revenue Recognizer,Check covenant compliance for the revolver,completed,10.6,"FP&A Feb variance was $2,218,776 vs plan",2026-05-20T13:42:57Z
+r12-0000039,khaddad@keslermachineworks.com,Budget vs Actual,Summarize the Jun variance for entity MX-02,completed,13.5,"Ops Jun variance was $1,985,433 vs plan",2026-05-20T14:00:55Z
+r12-0000040,wrodriguez@keslermachineworks.com,Journal Entry Reviewer,Summarize the Mar variance for entity EU-02,completed,61.7,"FP&A Mar variance was $910,230 vs plan",2026-05-23T09:21:18Z
+r12-0000041,khaddad@keslermachineworks.com,Close Checklist Bot,Which cost centers are over budget YTD?,error,4.8,Traceback (most recent call last): KeyError 'entity',2026-05-25T14:53:24Z
+r12-0000042,wrodriguez@keslermachineworks.com,Revenue Recognizer,Check covenant compliance for the revolver,completed,67.6,"Treasury Mar variance was $2,237,411 vs plan",2026-05-26T13:40:43Z
+r12-0000043,khaddad@keslermachineworks.com,Journal Entry Reviewer,Which cost centers are over budget YTD?,completed,30.9,"Accounting Mar variance was $4,266,136 vs plan",2026-05-26T10:47:34Z
+r12-0000044,khaddad@keslermachineworks.com,Covenant Checker,Why did Treasury spend exceed budget in Jun?,completed,53.4,"Treasury Jun variance was $3,838,547 vs plan",2026-05-27T14:06:37Z
+r12-0000045,wrodriguez@keslermachineworks.com,AP Aging Analyst,Why did Accounting spend exceed budget in Feb?,completed,62.0,"Accounting Feb variance was $4,290,143 vs plan",2026-05-29T13:02:42Z
+r12-0000046,wrodriguez@keslermachineworks.com,Headcount Planner,Forecast Apr operating cash flow,completed,42.0,"Accounting Apr variance was $2,225,481 vs plan",2026-06-03T15:42:08Z
+r12-0000047,khaddad@keslermachineworks.com,Headcount Planner,Explain the headcount variance vs plan,completed,12.0,"FP&A Jan variance was $2,450,093 vs plan",2026-06-04T14:28:45Z
+r12-0000048,khaddad@keslermachineworks.com,Revenue Recognizer,Explain the headcount variance vs plan,completed,22.0,"Ops Jan variance was $2,845,985 vs plan",2026-06-05T11:41:03Z
+r12-0000049,khaddad@keslermachineworks.com,Board Deck Builder,Check covenant compliance for the revolver,error,6.9,error: connection reset by peer,2026-06-08T12:05:57Z
+r12-0000050,wrodriguez@keslermachineworks.com,Cash Forecaster,Explain the headcount variance vs plan,completed,0.5,error code 502 from model gateway,2026-06-09T17:27:21Z
+r12-0000051,wrodriguez@keslermachineworks.com,Revenue Recognizer,Check covenant compliance for the revolver,completed,63.1,"Treasury Jan variance was $3,019,229 vs plan",2026-06-09T13:02:11Z
+r12-0000052,wrodriguez@keslermachineworks.com,Journal Entry Reviewer,Draft flux commentary for the May close,completed,32.5,"Accounting May variance was $4,177,980 vs plan",2026-06-12T12:48:54Z
+r12-0000053,wrodriguez@keslermachineworks.com,AP Aging Analyst,Forecast Feb operating cash flow,completed,40.4,"FP&A Feb variance was $67,479 vs plan",2026-06-12T12:47:31Z
+r12-0000054,wrodriguez@keslermachineworks.com,Revenue Recognizer,Explain the headcount variance vs plan,completed,16.4,"FP&A Jun variance was $3,727,876 vs plan",2026-06-13T11:00:00Z
+r12-0000055,wrodriguez@keslermachineworks.com,Headcount Planner,Forecast May operating cash flow,error,3.8,FAILED: null reference in aggregation step,2026-06-24T16:37:57Z
+r12-0000056,wrodriguez@keslermachineworks.com,Covenant Checker,Build the board deck cash slide for Apr,completed,42.6,"Ops Apr variance was $1,802,118 vs plan",2026-06-27T10:43:43Z
+r12-0000057,wrodriguez@keslermachineworks.com,Journal Entry Reviewer,Summarize the Jun variance for entity MX-01,completed,0.4,error code 502 from model gateway,2026-06-29T14:06:17Z
+r12-0000058,khaddad@keslermachineworks.com,Headcount Planner,Which cost centers are over budget YTD?,error,2.8,error: connection reset by peer,2026-06-29T13:30:10Z
+r12-0000059,khaddad@keslermachineworks.com,Revenue Recognizer,Draft flux commentary for the Jan close,completed,15.5,"Ops Jan variance was $4,326,301 vs plan",2026-06-30T07:26:39Z
+r12-0000060,khaddad@keslermachineworks.com,Close Checklist Bot,Build the board deck cash slide for Jun,completed,31.6,"FP&A Jun variance was $58,848 vs plan",2026-06-30T13:56:48Z
+r12-0000003,wrodriguez@keslermachineworks.com,Variance Explainer,What drove the change in gross margin this quarter?,completed,23.5,"FP&A Mar variance was $4,316,197 vs plan",2026-03-03T11:06:54Z

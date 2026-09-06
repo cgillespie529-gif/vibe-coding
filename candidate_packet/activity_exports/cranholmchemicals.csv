@@ -1,0 +1,67 @@
+run_id,user_email,agent_name,question_text,run_status,run_duration_sec,output_snippet,timestamp
+r40-0000001,rkim@cranholmchemicals.com,Close Checklist Bot,Why did FP&A spend exceed budget in Jun?,completed,6.6,"FP&A Jun variance was $3,462,264 vs plan",2026-03-02T16:19:38Z
+r40-0000002,lkim@cranholmchemicals.com,Flux Commentary,Check covenant compliance for the revolver,completed,0.4,error: connection reset by peer,2026-03-02T15:09:14Z
+r40-0000003,lkim@cranholmchemicals.com,Board Deck Builder,What drove the change in gross margin this quarter?,completed,13.3,"FP&A Mar variance was $177,298 vs plan",2026-03-05T08:55:42Z
+r40-0000004,rkim@cranholmchemicals.com,Journal Entry Reviewer,Why did Treasury spend exceed budget in May?,completed,41.5,"Treasury May variance was $982,072 vs plan",2026-03-08T13:05:05Z
+r40-0000005,lkim@cranholmchemicals.com,Flux Commentary,Explain the headcount variance vs plan,completed,39.3,"Ops Feb variance was $3,381,581 vs plan",2026-03-12T14:29:26Z
+r40-0000006,lkim@cranholmchemicals.com,Covenant Checker,Forecast Mar operating cash flow,completed,72.1,"FP&A Mar variance was $2,026,241 vs plan",2026-03-13T20:48:17Z
+r40-0000007,lkim@cranholmchemicals.com,Vendor Spend Analyzer,Which cost centers are over budget YTD?,completed,35.8,"FP&A May variance was $451,545 vs plan",2026-03-14T17:43:27Z
+r40-0000008,rkim@cranholmchemicals.com,Cash Forecaster,Explain the headcount variance vs plan,completed,57.9,"Ops Feb variance was $355,347 vs plan",2026-03-16T07:58:19Z
+r40-0000009,lkim@cranholmchemicals.com,Flux Commentary,Why did Ops spend exceed budget in Apr?,completed,28.4,"Ops Apr variance was $1,771,253 vs plan",2026-03-16T11:43:38Z
+r40-0000010,lkim@cranholmchemicals.com,Flux Commentary,What drove the change in gross margin this quarter?,completed,69.4,"Treasury May variance was $1,333,666 vs plan",2026-03-16T08:57:57Z
+r40-0000011,rkim@cranholmchemicals.com,Close Checklist Bot,Build the board deck cash slide for Feb,completed,69.3,"FP&A Feb variance was $1,420,413 vs plan",2026-03-17T17:14:30Z
+r40-0000012,rkim@cranholmchemicals.com,Budget vs Actual,Build the board deck cash slide for May,completed,4.8,"FP&A May variance was $3,298,218 vs plan",2026-03-19T11:50:55Z
+r40-0000013,rkim@cranholmchemicals.com,Flux Commentary,Which cost centers are over budget YTD?,completed,1.7,ERROR: upstream request timed out,2026-03-21T12:42:27Z
+r40-0000014,rkim@cranholmchemicals.com,Cash Forecaster,Draft flux commentary for the Mar close,completed,26.1,"Accounting Mar variance was $1,273,832 vs plan",2026-03-21T15:15:14Z
+r40-0000015,rkim@cranholmchemicals.com,Flux Commentary,Forecast Feb operating cash flow,completed,48.3,"Accounting Feb variance was $3,259,251 vs plan",2026-03-22T16:31:19Z
+r40-0000016,rkim@cranholmchemicals.com,Vendor Spend Analyzer,Build the board deck cash slide for May,error,6.0,Traceback (most recent call last): KeyError 'entity',2026-03-26T12:22:03Z
+r40-0000017,rkim@cranholmchemicals.com,Revenue Recognizer,Which cost centers are over budget YTD?,error,2.7,ERROR: upstream request timed out,2026-03-31T12:42:07Z
+r40-0000018,rkim@cranholmchemicals.com,Revenue Recognizer,Draft flux commentary for the May close,completed,19.8,"Ops May variance was $3,476,339 vs plan",2026-03-31T08:50:13Z
+r40-0000019,lkim@cranholmchemicals.com,Variance Explainer,Reconcile AP aging over 90 days for US-09,completed,35.5,"FP&A Mar variance was $2,450,439 vs plan",2026-04-01T10:27:00Z
+r40-0000020,rkim@cranholmchemicals.com,Revenue Recognizer,Check covenant compliance for the revolver,completed,22.9,"FP&A Jun variance was $3,141,540 vs plan",2026-04-02T10:27:08Z
+r40-0000021,lkim@cranholmchemicals.com,Budget vs Actual,Summarize the Jun variance for entity CA-04,completed,67.1,"FP&A Jun variance was $3,215,919 vs plan",2026-04-07T17:36:50Z
+r40-0000022,lkim@cranholmchemicals.com,Vendor Spend Analyzer,Forecast Jan operating cash flow,error,3.9,error code 502 from model gateway,2026-04-08T13:31:27Z
+r40-0000023,rkim@cranholmchemicals.com,Revenue Recognizer,What drove the change in gross margin this quarter?,completed,34.0,"Ops Jan variance was $349,553 vs plan",2026-04-08T13:55:37Z
+r40-0000024,lkim@cranholmchemicals.com,Board Deck Builder,Check covenant compliance for the revolver,error,1.2,Traceback (most recent call last): KeyError 'entity',2026-04-09T13:31:03Z
+r40-0000025,lkim@cranholmchemicals.com,Budget vs Actual,Reconcile AP aging over 90 days for US-04,completed,33.7,"Ops Apr variance was $2,567,768 vs plan",2026-04-11T16:29:33Z
+r40-0000026,rkim@cranholmchemicals.com,Cash Forecaster,Draft flux commentary for the Apr close,completed,43.1,"Ops Apr variance was $2,853,859 vs plan",2026-04-14T08:20:38Z
+r40-0000027,lkim@cranholmchemicals.com,Board Deck Builder,Check covenant compliance for the revolver,completed,43.5,"Ops May variance was $3,356,936 vs plan",2026-04-14T10:50:57Z
+r40-0000028,rkim@cranholmchemicals.com,Board Deck Builder,Which cost centers are over budget YTD?,completed,44.0,"Ops Apr variance was $506,118 vs plan",2026-04-14T14:47:16Z
+r40-0000029,rkim@cranholmchemicals.com,Covenant Checker,Why did FP&A spend exceed budget in Jan?,completed,11.4,"FP&A Jan variance was $1,068,945 vs plan",2026-04-20T11:53:45Z
+r40-0000030,lkim@cranholmchemicals.com,Close Checklist Bot,Forecast Jun operating cash flow,completed,62.2,"Ops Jun variance was $587,123 vs plan",2026-04-24T09:19:38Z
+r40-0000031,rkim@cranholmchemicals.com,Revenue Recognizer,Explain the headcount variance vs plan,completed,58.4,"FP&A Jun variance was $236,715 vs plan",2026-04-26T12:21:38Z
+r40-0000032,lkim@cranholmchemicals.com,AP Aging Analyst,Forecast Mar operating cash flow,completed,50.1,"Treasury Mar variance was $1,888,749 vs plan",2026-04-27T10:57:49Z
+r40-0000033,rkim@cranholmchemicals.com,Vendor Spend Analyzer,Explain the headcount variance vs plan,completed,13.8,"FP&A Mar variance was $234,726 vs plan",2026-04-27T15:47:52Z
+r40-0000034,rkim@cranholmchemicals.com,Journal Entry Reviewer,Build the board deck cash slide for Mar,error,2.5,error code 502 from model gateway,2026-04-29T15:47:01Z
+r40-0000035,rkim@cranholmchemicals.com,Budget vs Actual,Explain the headcount variance vs plan,completed,44.5,"Accounting May variance was $4,363,210 vs plan",2026-05-01T16:05:32Z
+r40-0000036,rkim@cranholmchemicals.com,Journal Entry Reviewer,Explain the headcount variance vs plan,completed,27.9,"Ops Jun variance was $1,106,894 vs plan",2026-05-05T14:37:48Z
+r40-0000037,rkim@cranholmchemicals.com,Flux Commentary,Check covenant compliance for the revolver,completed,23.6,"FP&A May variance was $1,051,609 vs plan",2026-05-06T13:36:32Z
+r40-0000038,lkim@cranholmchemicals.com,Flux Commentary,What drove the change in gross margin this quarter?,completed,6.1,"Accounting Feb variance was $554,209 vs plan",2026-05-07T13:23:36Z
+r40-0000039,lkim@cranholmchemicals.com,Variance Explainer,Check covenant compliance for the revolver,completed,27.7,"FP&A May variance was $4,294,428 vs plan",2026-05-10T16:51:35Z
+r40-0000040,lkim@cranholmchemicals.com,Cash Forecaster,Why did FP&A spend exceed budget in Jan?,completed,70.2,"FP&A Jan variance was $3,562,191 vs plan",2026-05-11T10:55:20Z
+r40-0000041,rkim@cranholmchemicals.com,Covenant Checker,Draft flux commentary for the Mar close,completed,73.2,"FP&A Mar variance was $1,579,730 vs plan",2026-05-11T14:22:01Z
+r40-0000042,rkim@cranholmchemicals.com,Budget vs Actual,Forecast Feb operating cash flow,completed,64.4,"Accounting Feb variance was $1,140,733 vs plan",2026-05-14T12:23:28Z
+r40-0000043,lkim@cranholmchemicals.com,Headcount Planner,Check covenant compliance for the revolver,completed,18.6,"Treasury May variance was $297,708 vs plan",2026-05-15T16:56:24Z
+r40-0000044,rkim@cranholmchemicals.com,Board Deck Builder,Summarize the Jan variance for entity MX-09,completed,67.2,"Ops Jan variance was $729,405 vs plan",2026-05-15T16:26:16Z
+r40-0000045,rkim@cranholmchemicals.com,AP Aging Analyst,Summarize the Jun variance for entity MX-08,completed,26.6,"Treasury Jun variance was $4,408,649 vs plan",2026-05-17T14:44:45Z
+r40-0000046,lkim@cranholmchemicals.com,Revenue Recognizer,Forecast Mar operating cash flow,completed,37.3,"Ops Mar variance was $1,242,481 vs plan",2026-05-18T11:32:53Z
+r40-0000047,lkim@cranholmchemicals.com,Variance Explainer,Build the board deck cash slide for Feb,completed,56.5,"Accounting Feb variance was $3,384,561 vs plan",2026-05-19T11:17:44Z
+r40-0000048,lkim@cranholmchemicals.com,Headcount Planner,Reconcile AP aging over 90 days for US-06,completed,11.4,"Accounting Feb variance was $2,696,185 vs plan",2026-05-20T08:21:34Z
+r40-0000049,rkim@cranholmchemicals.com,Revenue Recognizer,Explain the headcount variance vs plan,completed,67.2,"Treasury Jun variance was $2,054,699 vs plan",2026-05-21T12:02:42Z
+r40-0000050,lkim@cranholmchemicals.com,Headcount Planner,Why did FP&A spend exceed budget in May?,completed,12.2,"FP&A May variance was $1,304,472 vs plan",2026-05-21T11:54:07Z
+r40-0000051,lkim@cranholmchemicals.com,Revenue Recognizer,Explain the headcount variance vs plan,completed,28.0,"Ops Jan variance was $4,089,960 vs plan",2026-05-22T14:25:51Z
+r40-0000052,rkim@cranholmchemicals.com,Revenue Recognizer,Check covenant compliance for the revolver,completed,46.0,"Treasury May variance was $36,787 vs plan",2026-05-29T11:06:56Z
+r40-0000053,rkim@cranholmchemicals.com,Cash Forecaster,Why did FP&A spend exceed budget in Feb?,completed,7.0,"FP&A Feb variance was $532,187 vs plan",2026-06-03T10:42:40Z
+r40-0000054,rkim@cranholmchemicals.com,Journal Entry Reviewer,Reconcile AP aging over 90 days for EU-09,completed,0.8,FAILED: null reference in aggregation step,2026-06-07T09:21:12Z
+r40-0000055,rkim@cranholmchemicals.com,Vendor Spend Analyzer,Why did Ops spend exceed budget in Apr?,completed,73.3,"Ops Apr variance was $2,696,245 vs plan",2026-06-08T17:27:57Z
+r40-0000056,lkim@cranholmchemicals.com,Headcount Planner,Reconcile AP aging over 90 days for CA-07,completed,31.6,"FP&A May variance was $1,190,945 vs plan",2026-06-10T13:23:38Z
+r40-0000057,lkim@cranholmchemicals.com,Covenant Checker,Check covenant compliance for the revolver,completed,68.0,"Ops Mar variance was $52,847 vs plan",2026-06-11T10:29:02Z
+r40-0000058,lkim@cranholmchemicals.com,Flux Commentary,Explain the headcount variance vs plan,completed,0.2,FAILED: null reference in aggregation step,2026-06-15T13:12:34Z
+r40-0000059,lkim@cranholmchemicals.com,AP Aging Analyst,Draft flux commentary for the Apr close,completed,46.7,"Treasury Apr variance was $3,110,558 vs plan",2026-06-19T14:31:41Z
+r40-0000060,lkim@cranholmchemicals.com,Budget vs Actual,Summarize the Apr variance for entity US-05,completed,5.1,"Treasury Apr variance was $4,165,569 vs plan",2026-06-22T17:43:16Z
+r40-0000061,lkim@cranholmchemicals.com,AP Aging Analyst,Explain the headcount variance vs plan,completed,52.4,"Accounting May variance was $2,024,619 vs plan",2026-06-22T18:07:42Z
+r40-0000062,lkim@cranholmchemicals.com,Flux Commentary,Explain the headcount variance vs plan,completed,68.7,"Accounting Apr variance was $2,082,190 vs plan",2026-06-23T15:10:35Z
+r40-0000063,rkim@cranholmchemicals.com,Vendor Spend Analyzer,Draft flux commentary for the Jun close,completed,41.7,"Treasury Jun variance was $4,064,892 vs plan",2026-06-25T08:15:33Z
+r40-0000064,rkim@cranholmchemicals.com,Close Checklist Bot,Forecast Jan operating cash flow,completed,17.5,"Accounting Jan variance was $2,245,199 vs plan",2026-06-30T08:32:29Z
+r40-0000002,lkim@cranholmchemicals.com,Flux Commentary,Check covenant compliance for the revolver,completed,0.4,error: connection reset by peer,2026-03-02T15:09:14Z
+r40-0000038,lkim@cranholmchemicals.com,Flux Commentary,What drove the change in gross margin this quarter?,completed,6.1,"Accounting Feb variance was $554,209 vs plan",2026-05-07T13:23:36Z

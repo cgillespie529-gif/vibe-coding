@@ -1,0 +1,36 @@
+#post-sales-eng   |  export
+
+[Mon 9:14 AM] marcus.k: does anyone actually know which accounts are healthy right now
+[Mon 9:15 AM] dana.r: define healthy lol
+[Mon 9:15 AM] marcus.k: like are they using the thing. i have 50-something logos and a spreadsheet from march
+    :cry: 2   :100: 1
+[Mon 9:22 AM] telli.d: we asked for a usage hub back in April
+[Mon 9:22 AM] telli.d: got told eng would handle it
+[Mon 9:31 AM] priya (eng): we will, it's on the roadmap
+[Mon 9:31 AM] priya (eng): -ish
+    :sweat_smile: 3
+
+[Tue 11:02 AM] aria.l: reminder the ERP write-back thing — sales is telling Bergstrom we do native write-back
+[Tue 11:03 AM] jordan (eng): we do not. it's read-only plus a nightly export. there is no write path
+[Tue 11:03 AM] aria.l: ok because the AE already put it in the deck
+[Tue 11:04 AM] jordan (eng): please pull that slide
+[Tue 11:20 AM] aria.l: any update on this?
+    (no reply)
+
+[Wed 2:41 PM] priya (eng): heads up for whoever builds reporting — there is no live db access
+[Wed 2:41 PM] priya (eng): everything runs off the nightly S3 dump. do not point anything at prod
+[Wed 2:42 PM] marcus.k: so a hub would read the S3 dump then
+[Wed 2:42 PM] priya (eng): yes. batch, once a day. that's the constraint
+    :thumbsup: 4
+
+[Wed 4:07 PM] dana.r: also CRM cleanup — after the Tri-State acquisition closed, two accounts got renamed
+[Wed 4:07 PM] dana.r: Halvorsen Tool & Die is now on the books as Halvorsen Industrial
+[Wed 4:08 PM] dana.r: and Meridian Chemical became Meridian Specialty. CRM still has both records for each
+[Wed 4:08 PM] telli.d: so the ARR is split across two rows?
+[Wed 4:09 PM] dana.r: yep. nobody merged them. it's a mess
+    :facepalm: 2
+
+[Thu 10:15 AM] marcus.k: last thing — a few files in the export have the account id in the name, some have the company name, some have dates. no idea who set that up
+[Thu 10:16 AM] jordan (eng): the exporter is held together with tape. sorry
+[Thu 10:31 AM] telli.d: any update on the hub btw
+    (no reply)

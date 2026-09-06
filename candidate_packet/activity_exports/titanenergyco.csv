@@ -1,0 +1,42 @@
+run_id,user_email,agent_name,question_text,run_status,run_duration_sec,output_snippet,timestamp,cost_center,entity_code,approval_required
+r48-0000001,tgonzalez@titanenergyco.com,Flux Commentary,Draft flux commentary for the Jan close,completed,35.9,"Accounting Jan variance was $2,793,213 vs plan",2026-03-05T07:59:33Z,CC-7977,US-06,No
+r48-0000002,mmartinez@titanenergyco.com,Revenue Recognizer,Check covenant compliance for the revolver,completed,73.0,"Treasury May variance was $3,736,918 vs plan",2026-03-10T12:42:38Z,CC-9539,CA-05,No
+r48-0000003,tgonzalez@titanenergyco.com,Variance Explainer,Check covenant compliance for the revolver,completed,23.6,"Accounting May variance was $403,887 vs plan",2026-03-12T06:09:08Z,CC-9557,EU-09,No
+r48-0000004,mmartinez@titanenergyco.com,Board Deck Builder,Why did Accounting spend exceed budget in Jun?,completed,49.0,"Accounting Jun variance was $2,062,697 vs plan",2026-03-17T14:19:40Z,CC-4827,CA-06,No
+r48-0000005,tgonzalez@titanenergyco.com,Close Checklist Bot,Which cost centers are over budget YTD?,completed,56.7,"Ops May variance was $4,575,250 vs plan",2026-03-23T14:47:11Z,CC-8424,CA-02,No
+r48-0000006,mmartinez@titanenergyco.com,Headcount Planner,Summarize the Mar variance for entity CA-08,completed,61.1,"Ops Mar variance was $332,046 vs plan",2026-03-24T08:17:58Z,CC-2977,CA-08,Yes
+r48-0000007,tgonzalez@titanenergyco.com,Cash Forecaster,Why did Accounting spend exceed budget in Apr?,completed,25.0,"Accounting Apr variance was $3,175,861 vs plan",2026-03-26T14:17:54Z,CC-4102,CA-08,No
+r48-0000008,mmartinez@titanenergyco.com,Vendor Spend Analyzer,Check covenant compliance for the revolver,completed,10.2,"Treasury Apr variance was $2,635,619 vs plan",2026-03-28T18:59:56Z,CC-3451,US-02,Yes
+r48-0000009,mmartinez@titanenergyco.com,Board Deck Builder,Reconcile AP aging over 90 days for MX-09,completed,17.5,"Ops May variance was $510,089 vs plan",2026-04-02T12:25:12Z,CC-9011,MX-09,No
+r48-0000010,tgonzalez@titanenergyco.com,Board Deck Builder,Draft flux commentary for the Mar close,completed,73.6,"FP&A Mar variance was $185,059 vs plan",2026-04-05T14:29:23Z,CC-9783,CA-09,No
+r48-0000011,tgonzalez@titanenergyco.com,Variance Explainer,Build the board deck cash slide for Jun,completed,62.6,"Treasury Jun variance was $668,227 vs plan",2026-04-13T14:22:33Z,CC-7654,CA-09,No
+r48-0000012,tgonzalez@titanenergyco.com,Variance Explainer,Check covenant compliance for the revolver,completed,42.8,"Accounting Apr variance was $2,387,852 vs plan",2026-04-14T16:34:02Z,CC-1307,EU-05,No
+r48-0000013,mmartinez@titanenergyco.com,Variance Explainer,Reconcile AP aging over 90 days for US-07,completed,45.8,"FP&A Mar variance was $4,321,892 vs plan",2026-04-15T20:06:13Z,CC-7899,US-07,No
+r48-0000014,mmartinez@titanenergyco.com,Vendor Spend Analyzer,Why did Accounting spend exceed budget in Apr?,completed,40.3,"Accounting Apr variance was $1,929,268 vs plan",2026-04-15T20:53:14Z,CC-5772,US-03,Yes
+r48-0000015,mmartinez@titanenergyco.com,Revenue Recognizer,Which cost centers are over budget YTD?,completed,6.5,"Ops Apr variance was $4,412,138 vs plan",2026-04-15T12:32:09Z,CC-1168,US-02,
+r48-0000016,mmartinez@titanenergyco.com,Cash Forecaster,Check covenant compliance for the revolver,completed,4.9,"Ops Jun variance was $2,038,789 vs plan",2026-04-24T14:19:56Z,CC-2108,MX-05,No
+r48-0000017,mmartinez@titanenergyco.com,Vendor Spend Analyzer,Why did Ops spend exceed budget in Jun?,completed,10.3,"Ops Jun variance was $935,305 vs plan",2026-04-27T11:09:24Z,CC-2797,EU-09,No
+r48-0000018,mmartinez@titanenergyco.com,Flux Commentary,Explain the headcount variance vs plan,completed,11.3,"FP&A Jun variance was $1,235,475 vs plan",2026-05-04T17:45:24Z,CC-8564,MX-01,No
+r48-0000019,mmartinez@titanenergyco.com,Flux Commentary,Explain the headcount variance vs plan,completed,12.9,"Ops Jun variance was $4,601,359 vs plan",2026-05-05T10:54:27Z,CC-3539,EU-01,Yes
+r48-0000020,tgonzalez@titanenergyco.com,Flux Commentary,Why did Ops spend exceed budget in Jun?,completed,34.9,"Ops Jun variance was $1,055,952 vs plan",2026-05-06T11:41:53Z,CC-5456,CA-06,
+r48-0000021,tgonzalez@titanenergyco.com,Vendor Spend Analyzer,Which cost centers are over budget YTD?,completed,62.9,"Ops Feb variance was $2,912,332 vs plan",2026-05-06T11:45:34Z,CC-8454,US-05,Yes
+r48-0000022,tgonzalez@titanenergyco.com,AP Aging Analyst,Explain the headcount variance vs plan,completed,15.8,"FP&A Jun variance was $4,235,769 vs plan",2026-05-12T11:04:29Z,CC-3176,EU-08,No
+r48-0000023,tgonzalez@titanenergyco.com,Close Checklist Bot,Summarize the Jun variance for entity US-08,completed,70.2,"Treasury Jun variance was $1,150,742 vs plan",2026-05-14T08:32:08Z,CC-4020,US-08,
+r48-0000024,mmartinez@titanenergyco.com,Variance Explainer,What drove the change in gross margin this quarter?,completed,10.2,"Accounting Jan variance was $1,902,894 vs plan",2026-05-15T13:03:01Z,CC-5550,US-05,
+r48-0000025,tgonzalez@titanenergyco.com,AP Aging Analyst,Explain the headcount variance vs plan,error,1.2,error: connection reset by peer,2026-05-18T17:41:07Z,CC-7843,CA-07,No
+r48-0000026,tgonzalez@titanenergyco.com,Board Deck Builder,Explain the headcount variance vs plan,completed,73.0,"FP&A May variance was $128,340 vs plan",2026-05-19T13:55:27Z,CC-6847,EU-04,No
+r48-0000027,tgonzalez@titanenergyco.com,Journal Entry Reviewer,Forecast Mar operating cash flow,completed,31.2,"Treasury Mar variance was $720,774 vs plan",2026-05-21T15:25:47Z,CC-4160,MX-09,Yes
+r48-0000028,tgonzalez@titanenergyco.com,Covenant Checker,What drove the change in gross margin this quarter?,completed,65.5,"Treasury Feb variance was $1,125,868 vs plan",2026-05-22T13:04:11Z,CC-7643,EU-07,No
+r48-0000029,tgonzalez@titanenergyco.com,Headcount Planner,Summarize the May variance for entity EU-08,completed,21.6,"FP&A May variance was $2,743,765 vs plan",2026-05-26T19:05:25Z,CC-4211,EU-08,Yes
+r48-0000030,mmartinez@titanenergyco.com,Board Deck Builder,Why did Ops spend exceed budget in May?,completed,62.7,"Ops May variance was $2,194,569 vs plan",2026-05-29T14:58:28Z,CC-3682,US-08,No
+r48-0000031,tgonzalez@titanenergyco.com,AP Aging Analyst,Check covenant compliance for the revolver,completed,71.8,"Treasury May variance was $3,912,236 vs plan",2026-05-30T12:55:12Z,CC-7722,US-05,
+r48-0000032,tgonzalez@titanenergyco.com,Close Checklist Bot,Draft flux commentary for the May close,completed,13.0,"Accounting May variance was $2,678,075 vs plan",2026-05-31T11:06:48Z,CC-3191,US-03,No
+r48-0000033,tgonzalez@titanenergyco.com,Variance Explainer,Why did FP&A spend exceed budget in May?,completed,21.4,"FP&A May variance was $3,139,343 vs plan",2026-06-02T08:23:52Z,CC-2876,MX-06,No
+r48-0000034,mmartinez@titanenergyco.com,Headcount Planner,Why did FP&A spend exceed budget in Apr?,completed,1.6,error: connection reset by peer,2026-06-03T10:01:41Z,CC-8004,US-02,
+r48-0000035,tgonzalez@titanenergyco.com,Board Deck Builder,Forecast Apr operating cash flow,completed,4.0,"Ops Apr variance was $2,209,171 vs plan",2026-06-05T11:31:45Z,CC-1011,US-07,No
+r48-0000036,tgonzalez@titanenergyco.com,Journal Entry Reviewer,Check covenant compliance for the revolver,completed,65.0,"Treasury Feb variance was $4,668,688 vs plan",2026-06-09T10:58:29Z,CC-6623,EU-09,Yes
+r48-0000037,mmartinez@titanenergyco.com,Close Checklist Bot,Why did Ops spend exceed budget in Jan?,completed,50.0,"Ops Jan variance was $2,457,961 vs plan",2026-06-12T14:11:50Z,CC-6134,CA-07,No
+r48-0000038,tgonzalez@titanenergyco.com,Headcount Planner,Check covenant compliance for the revolver,completed,14.4,"FP&A Jan variance was $3,410,488 vs plan",2026-06-20T13:54:59Z,CC-2065,CA-01,No
+r48-0000039,tgonzalez@titanenergyco.com,Close Checklist Bot,Forecast Mar operating cash flow,completed,36.4,"Accounting Mar variance was $1,918,492 vs plan",2026-06-23T11:06:04Z,CC-8487,MX-03,No
+r48-0000040,mmartinez@titanenergyco.com,AP Aging Analyst,Draft flux commentary for the Feb close,completed,44.8,"Ops Feb variance was $257,597 vs plan",2026-06-28T08:07:46Z,CC-4681,EU-07,
+r48-0000040,mmartinez@titanenergyco.com,AP Aging Analyst,Draft flux commentary for the Feb close,completed,44.8,"Ops Feb variance was $257,597 vs plan",2026-06-28T08:07:46Z,CC-4681,EU-07,

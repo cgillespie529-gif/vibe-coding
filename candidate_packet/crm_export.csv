@@ -1,0 +1,57 @@
+account_id,account_name,vertical,arr,contract_start,renewal_date,owner,stage,licensed_seats,revenue_band
+ACC-1039,Silverline Freight,freight,3585000,2025-08-03,2027-08-03,Rae G.,Live,43,Tier 1
+ACC-1033,Copper Kettle Franchising,restaurant franchising,1890000,2026-03-11,2027-03-11,Rae G.,Live,58,Tier 1
+ACC-1046,Portland Retail Group,retail,1380000,2025-04-15,2027-04-15,Telli D.,Live,42,Tier 2
+ACC-2017,Halvorsen Industrial,industrial manufacturing,1405000,2025-05-29,2026-08-20,Rae G.,Live,24,Tier 1
+ACC-1038,Ironbridge Building Co,building products,2860000,2025-09-16,2027-09-16,Sam P.,Live,57,Tier 1
+ACC-1029,Delta Ag Cooperative,ag,4140000,2025-12-13,2026-12-13,Sam P.,Live,40,Tier 1
+ACC-1037,Lakeside Utilities,utilities,2230000,2026-01-15,2027-01-15,Aria L.,Live,28,Tier 1
+ACC-1006,Ridgeline Restaurant Group,restaurant franchising,4125000,2026-04-02,2028-04-02,Telli D.,Live,85,Tier 1
+ACC-1024,Harborview Retail,retail,1110000,2025-05-18,2027-05-18,Telli D.,Live,36,Tier 2
+ACC-1035,Trinity Foods,food distribution,3425000,2026-02-06,2027-02-06,Telli D.,Live,35,Tier 1
+ACC-1018,Coastal Building Systems,building products,1005000,2025-09-05,2027-09-05,Rae G.,Live,32,Tier 2
+ACC-1004,Cascade Building Products,building products,1070000,2025-09-27,2026-08-01,Marcus K.,Live,32,Tier 2
+ACC-1034,Belmont Insurance,insurance,305000,2026-02-28,2027-02-28,Telli D.,Live,29,Tier 3
+ACC-1030,Brightpath Health,healthcare services,2685000,2025-12-02,2027-12-02,Rae G.,Live,44,Tier 1
+ACC-1048,Titan Energy Co,energy,595000,2026-05-05,2027-05-05,Telli D.,Onboarding,31,Tier 2
+ACC-1000,Bergstrom Industrial Inc,industrial manufacturing,1175000,2025-11-10,2027-11-10,Marcus K.,Live,41,Tier 1
+ACC-1028,Keystone Building Products,building products,2780000,2025-02-08,2027-02-08,Dana R.,Live,52,Tier 1
+ACC-1044,Summit Health Partners,healthcare services,1395000,2025-01-28,2027-01-28,Rae G.,Live,35,Tier 2
+ACC-1008,Marlowe Retail Co,retail,835000,2024-12-26,2026-09-03,Telli D.,Live,29,Tier 2
+ACC-1050,Emerald Manufacturing,industrial manufacturing,865000,2025-08-25,2027-08-25,Marcus K.,Live,49,Tier 2
+ACC-1019,Grefeld Foodservice,food distribution,1455000,2026-01-26,2027-01-26,Rae G.,Live,49,Tier 2
+ACC-1007,Prairie Gold Ag,ag,845000,2025-03-02,2026-09-10,Dana R.,Live,37,Tier 2
+ACC-1026,Wabash Freight Lines,freight,1870000,2025-07-01,2027-07-01,Dana R.,Live,31,Tier 1
+ACC-1041,Meadowbrook Ag,ag,795000,2026-05-27,2028-05-27,Marcus K.,Onboarding,28,Tier 2
+ACC-1036,Westgate Energy,energy,1790000,2025-07-12,2027-07-12,Sam P.,Live,49,Tier 1
+ACC-1027,Sierra Restaurant Holdings,restaurant franchising,2125000,2024-12-15,2026-12-15,Telli D.,Live,37,Tier 1
+ACC-1005,Redstone Chemicals,specialty chemicals,1725000,2025-10-30,2026-10-30,Sam P.,Live,25,Tier 1
+ACC-1013,Fairfield Foods,food distribution,550000,2025-06-20,2027-06-20,Aria L.,Live,23,Tier 2
+ACC-1001,Tidewater Freight Systems,freight,3035000,2026-04-24,2027-04-24,Marcus K.,Onboarding,35,Tier 1
+ACC-1011,Blue Ridge Freight,freight,815000,2026-01-04,2027-01-04,Dana R.,Live,33,Tier 2
+ACC-1010,Allegheny Utilities,utilities,955000,2025-11-21,2026-11-21,Dana R.,Live,38,Tier 2
+ACC-1047,Highland Utilities,utilities,1030000,2026-04-13,,Rae G.,Live,34,Tier 2
+ACC-2000,"Bergstrom Industrial, Inc.",industrial manufacturing,965000,2025-11-10,2027-11-10,Dana R.,Live,20,Tier 1
+ACC-1025,Gulfstream Power & Light,utilities,290000,2026-05-16,2028-05-16,Aria L.,Onboarding,28,Tier 3
+ACC-2043,Meridian Specialty,specialty chemicals,450000,2026-03-22,2027-03-22,Marcus K.,Live,18,Tier 2
+ACC-1021,Cedar Valley Health,healthcare services,795000,2025-10-08,2026-10-08,Aria L.,Live,25,Tier 2
+ACC-1040,Cranholm Chemicals,specialty chemicals,3665000,2025-01-06,2027-01-06,Sam P.,Live,29,Tier 1
+ACC-1031,Foxhill Steel,industrial manufacturing,4000000,2025-06-09,2027-06-09,Telli D.,Live,35,Tier 1
+ACC-1016,Northwind Agriculture,ag,2550000,2025-04-26,2027-04-26,Aria L.,Live,31,Tier 1
+ACC-1043,Meridian Chemical,specialty chemicals,675000,2026-03-22,2027-03-22,Rae G.,Live,36,Tier 2
+ACC-1009,Stanton Health Services,healthcare services,3890000,2025-04-04,2026-07-20,Rae G.,Live,33,Tier 1
+ACC-1015,Delmar Restaurant Brands,restaurant franchising,3720000,2025-03-24,2027-03-24,Rae G.,Live,76,Tier 1
+ACC-1014,Sunbelt Energy Partners,energy,3715000,2025-10-19,2026-10-19,Telli D.,Live,34,Tier 1
+ACC-1051,Beacon Freight,freight,1045000,2024-11-01,2026-11-01,Marcus K.,Live,42,Tier 2
+ACC-1052,Crestview Insurance,insurance,2710000,2025-08-14,2027-08-14,Aria L.,Live,35,Tier 1
+ACC-1042,Rockwell Restaurant Group,restaurant franchising,1935000,2024-11-12,2026-11-12,Telli D.,Live,32,Tier 1
+ACC-1022,Ironclad Manufacturing,industrial manufacturing,1480000,2025-12-24,2026-12-24,Dana R.,Live,37,Tier 2
+ACC-1020,Pinnacle Insurance,insurance,4145000,2025-02-19,2027-02-19,Aria L.,Live,33,Tier 1
+ACC-1045,Guardian Insurance Co,insurance,955000,2024-12-04,2026-12-04,Sam P.,Live,27,Tier 2
+ACC-1023,Vermillion Chemical,specialty chemicals,3790000,2025-05-07,2027-05-07,Telli D.,Live,39,Tier 1
+ACC-1012,Kesler Machine Works,industrial manufacturing,3835000,2026-02-17,2026-09-08,Dana R.,Live,29,Tier 1
+ACC-1049,Vanguard Foods,food distribution,850000,2024-11-23,2026-11-23,Sam P.,Live,33,Tier 2
+ACC-1003,Harwell Insurance Group,insurance,390000,2025-01-17,2026-07-09,Aria L.,Live,39,Tier 3
+ACC-1017,Halvorsen Tool & Die,industrial manufacturing,1405000,2025-05-29,2026-08-20,Dana R.,Live,49,Tier 1
+ACC-1002,Copperline Foods,food distribution,3980000,2025-03-13,2027-03-13,Telli D.,Live,40,Tier 1
+ACC-1032,Ashland Retail Partners,retail,3570000,2025-07-23,2027-07-23,Telli D.,Live,31,Tier 1

@@ -1,0 +1,69 @@
+run_id,user_email,agent_name,question_text,run_status,run_duration_sec,output_snippet,timestamp
+r31-0000001,sthomas@foxhillsteel.com,Revenue Recognizer,Explain the headcount variance vs plan,SUCCESS,41.0,"FP&A Feb variance was $232,630 vs plan",03/03/2026 04:11:02 PM
+r31-0000002,jsanchez@foxhillsteel.com,AP Aging Analyst,Explain the headcount variance vs plan,SUCCESS,65.4,"Treasury Mar variance was $2,068,937 vs plan",03/03/2026 12:46:26 PM
+r31-0000003,jsanchez@foxhillsteel.com,Journal Entry Reviewer,Why did FP&A spend exceed budget in Jun?,SUCCESS,28.1,"FP&A Jun variance was $2,502,120 vs plan",03/09/2026 04:53:39 PM
+r31-0000004,sthomas@foxhillsteel.com,Vendor Spend Analyzer,Why did Ops spend exceed budget in Apr?,SUCCESS,9.2,"Ops Apr variance was $4,463,043 vs plan",03/10/2026 05:17:19 PM
+r31-0000005,jsanchez@foxhillsteel.com,Variance Explainer,Which cost centers are over budget YTD?,SUCCESS,25.0,"FP&A Feb variance was $4,299,097 vs plan",03/12/2026 11:24:32 AM
+r31-0000006,sthomas@foxhillsteel.com,Revenue Recognizer,Why did Ops spend exceed budget in Mar?,PARTIAL,8.3,"Ops Mar variance was $3,555,327 vs plan",03/12/2026 12:54:53 PM
+r31-0000007,jsanchez@foxhillsteel.com,Revenue Recognizer,Summarize the Feb variance for entity US-09,FAIL,6.0,error code 502 from model gateway,03/13/2026 02:14:58 PM
+r31-0000008,jsanchez@foxhillsteel.com,Board Deck Builder,Explain the headcount variance vs plan,SUCCESS,16.1,"Accounting May variance was $1,642,508 vs plan",03/13/2026 01:19:23 PM
+r31-0000009,jsanchez@foxhillsteel.com,Flux Commentary,Explain the headcount variance vs plan,SUCCESS,1.4,ERROR: upstream request timed out,03/15/2026 10:27:21 AM
+r31-0000010,jsanchez@foxhillsteel.com,Flux Commentary,What drove the change in gross margin this quarter?,SUCCESS,17.0,"Accounting Apr variance was $999,313 vs plan",03/16/2026 01:37:13 PM
+r31-0000011,jsanchez@foxhillsteel.com,Headcount Planner,Which cost centers are over budget YTD?,SUCCESS,59.1,"Accounting May variance was $309,934 vs plan",03/16/2026 02:07:33 PM
+r31-0000012,jsanchez@foxhillsteel.com,Variance Explainer,Build the board deck cash slide for Feb,SUCCESS,15.4,"FP&A Feb variance was $3,241,057 vs plan",03/18/2026 09:59:39 AM
+r31-0000013,sthomas@foxhillsteel.com,Journal Entry Reviewer,Explain the headcount variance vs plan,SUCCESS,69.9,"Ops Jan variance was $2,738,204 vs plan",03/20/2026 04:15:49 PM
+r31-0000014,jsanchez@foxhillsteel.com,Board Deck Builder,Forecast Jan operating cash flow,SUCCESS,57.3,"Treasury Jan variance was $72,196 vs plan",03/20/2026 04:19:57 PM
+r31-0000015,jsanchez@foxhillsteel.com,Revenue Recognizer,Explain the headcount variance vs plan,SUCCESS,66.2,"Ops May variance was $4,393,508 vs plan",03/24/2026 04:04:21 PM
+r31-0000016,jsanchez@foxhillsteel.com,Cash Forecaster,Why did Accounting spend exceed budget in Apr?,SUCCESS,14.9,"Accounting Apr variance was $1,542,688 vs plan",03/26/2026 05:07:20 PM
+r31-0000017,sthomas@foxhillsteel.com,Close Checklist Bot,Summarize the Jan variance for entity US-03,SUCCESS,52.1,"FP&A Jan variance was $958,089 vs plan",04/01/2026 11:18:49 AM
+r31-0000018,jsanchez@foxhillsteel.com,Cash Forecaster,Why did Ops spend exceed budget in Jan?,SUCCESS,43.8,"Ops Jan variance was $2,597,080 vs plan",04/02/2026 02:57:14 PM
+r31-0000019,sthomas@foxhillsteel.com,Headcount Planner,Reconcile AP aging over 90 days for EU-02,SUCCESS,24.1,"Ops Jun variance was $3,325,337 vs plan",04/03/2026 03:34:41 PM
+r31-0000020,sthomas@foxhillsteel.com,Board Deck Builder,Build the board deck cash slide for Feb,SUCCESS,53.0,"Accounting Feb variance was $286,732 vs plan",04/03/2026 08:05:10 AM
+r31-0000021,jsanchez@foxhillsteel.com,Flux Commentary,Summarize the May variance for entity CA-02,SUCCESS,45.0,"FP&A May variance was $2,287,528 vs plan",04/06/2026 12:32:59 PM
+r31-0000022,sthomas@foxhillsteel.com,Budget vs Actual,What drove the change in gross margin this quarter?,SUCCESS,14.5,"FP&A Apr variance was $2,528,427 vs plan",04/07/2026 10:47:12 AM
+r31-0000023,jsanchez@foxhillsteel.com,Variance Explainer,Forecast May operating cash flow,SUCCESS,20.4,"Ops May variance was $4,601,530 vs plan",04/07/2026 11:48:58 AM
+r31-0000024,sthomas@foxhillsteel.com,AP Aging Analyst,Which cost centers are over budget YTD?,SUCCESS,25.6,"FP&A Jan variance was $3,186,451 vs plan",04/08/2026 03:47:49 PM
+r31-0000025,sthomas@foxhillsteel.com,Close Checklist Bot,Summarize the Jan variance for entity US-06,SUCCESS,26.8,"FP&A Jan variance was $1,473,379 vs plan",04/08/2026 01:58:42 PM
+r31-0000026,sthomas@foxhillsteel.com,Journal Entry Reviewer,Summarize the Jan variance for entity EU-02,PARTIAL,41.9,"Ops Jan variance was $3,313,222 vs plan",04/10/2026 02:03:56 PM
+r31-0000027,sthomas@foxhillsteel.com,Variance Explainer,Explain the headcount variance vs plan,SUCCESS,1.3,ERROR: upstream request timed out,04/12/2026 01:40:59 PM
+r31-0000028,sthomas@foxhillsteel.com,Variance Explainer,Forecast Jun operating cash flow,SUCCESS,64.6,"Treasury Jun variance was $2,714,286 vs plan",04/14/2026 04:41:18 PM
+r31-0000029,jsanchez@foxhillsteel.com,Journal Entry Reviewer,Check covenant compliance for the revolver,SUCCESS,6.4,"FP&A Feb variance was $2,855,296 vs plan",04/14/2026 12:53:22 PM
+r31-0000030,jsanchez@foxhillsteel.com,Revenue Recognizer,Draft flux commentary for the Mar close,SUCCESS,31.1,"FP&A Mar variance was $2,468,093 vs plan",04/15/2026 10:55:46 AM
+r31-0000031,jsanchez@foxhillsteel.com,Flux Commentary,Summarize the Apr variance for entity EU-08,SUCCESS,14.6,"FP&A Apr variance was $2,421,267 vs plan",04/17/2026 01:44:12 PM
+r31-0000032,jsanchez@foxhillsteel.com,Journal Entry Reviewer,What drove the change in gross margin this quarter?,SUCCESS,51.6,"Ops Apr variance was $295,217 vs plan",04/20/2026 09:31:41 AM
+r31-0000033,jsanchez@foxhillsteel.com,AP Aging Analyst,What drove the change in gross margin this quarter?,SUCCESS,34.7,"Ops Jun variance was $2,422,705 vs plan",04/21/2026 02:18:35 PM
+r31-0000034,sthomas@foxhillsteel.com,Budget vs Actual,Summarize the Jan variance for entity EU-09,PARTIAL,63.7,"Treasury Jan variance was $4,689,283 vs plan",04/21/2026 06:26:57 AM
+r31-0000035,sthomas@foxhillsteel.com,Flux Commentary,Why did Treasury spend exceed budget in Jan?,PARTIAL,38.7,"Treasury Jan variance was $280,978 vs plan",04/23/2026 11:04:27 AM
+r31-0000036,sthomas@foxhillsteel.com,Revenue Recognizer,Why did FP&A spend exceed budget in Jun?,SUCCESS,31.5,"FP&A Jun variance was $3,456,854 vs plan",04/26/2026 05:43:11 PM
+r31-0000037,jsanchez@foxhillsteel.com,Close Checklist Bot,Forecast Jun operating cash flow,SUCCESS,7.0,"Accounting Jun variance was $3,516,887 vs plan",04/28/2026 12:17:59 PM
+r31-0000038,jsanchez@foxhillsteel.com,Budget vs Actual,Forecast Jun operating cash flow,SUCCESS,39.3,"Accounting Jun variance was $329,574 vs plan",05/02/2026 03:45:32 PM
+r31-0000039,sthomas@foxhillsteel.com,Revenue Recognizer,Which cost centers are over budget YTD?,SUCCESS,21.8,"Accounting Jun variance was $2,040,500 vs plan",05/05/2026 06:33:02 AM
+r31-0000040,jsanchez@foxhillsteel.com,Board Deck Builder,Why did Ops spend exceed budget in Jan?,SUCCESS,26.1,"Ops Jan variance was $3,037,340 vs plan",05/05/2026 01:28:50 PM
+r31-0000041,sthomas@foxhillsteel.com,Variance Explainer,Forecast Mar operating cash flow,SUCCESS,3.6,"Ops Mar variance was $2,353,033 vs plan",05/05/2026 02:24:04 PM
+r31-0000042,sthomas@foxhillsteel.com,Variance Explainer,Forecast Mar operating cash flow,SUCCESS,4.7,"FP&A Mar variance was $580,782 vs plan",05/08/2026 04:53:57 PM
+r31-0000043,jsanchez@foxhillsteel.com,Flux Commentary,Forecast Apr operating cash flow,SUCCESS,40.4,"Ops Apr variance was $2,231,306 vs plan",05/08/2026 02:04:32 PM
+r31-0000044,sthomas@foxhillsteel.com,Vendor Spend Analyzer,Build the board deck cash slide for May,SUCCESS,53.5,"Accounting May variance was $4,634,533 vs plan",05/12/2026 03:19:20 PM
+r31-0000045,jsanchez@foxhillsteel.com,Vendor Spend Analyzer,Summarize the Feb variance for entity EU-05,SUCCESS,34.7,"Accounting Feb variance was $3,954,517 vs plan",05/14/2026 07:15:23 AM
+r31-0000046,jsanchez@foxhillsteel.com,Close Checklist Bot,Why did Ops spend exceed budget in May?,SUCCESS,54.4,"Ops May variance was $4,102,500 vs plan",05/22/2026 10:47:25 PM
+r31-0000047,sthomas@foxhillsteel.com,Vendor Spend Analyzer,Reconcile AP aging over 90 days for MX-06,SUCCESS,51.1,"Treasury Jun variance was $4,635,331 vs plan",05/27/2026 09:54:45 AM
+r31-0000048,sthomas@foxhillsteel.com,Budget vs Actual,Which cost centers are over budget YTD?,SUCCESS,48.9,"Ops Jan variance was $3,725,865 vs plan",05/28/2026 12:49:51 PM
+r31-0000049,sthomas@foxhillsteel.com,Headcount Planner,Draft flux commentary for the Jan close,SUCCESS,51.3,"Ops Jan variance was $1,597,987 vs plan",05/29/2026 12:38:58 PM
+r31-0000050,jsanchez@foxhillsteel.com,Vendor Spend Analyzer,Reconcile AP aging over 90 days for MX-03,SUCCESS,52.1,"Treasury Mar variance was $1,613,058 vs plan",05/29/2026 02:37:23 PM
+r31-0000051,jsanchez@foxhillsteel.com,Revenue Recognizer,Forecast Feb operating cash flow,SUCCESS,52.8,"Accounting Feb variance was $239,881 vs plan",06/04/2026 01:27:46 PM
+r31-0000052,jsanchez@foxhillsteel.com,Budget vs Actual,Summarize the May variance for entity EU-08,SUCCESS,29.7,"Accounting May variance was $4,218,503 vs plan",06/05/2026 03:43:34 PM
+r31-0000053,jsanchez@foxhillsteel.com,Covenant Checker,Forecast Mar operating cash flow,SUCCESS,46.6,"Accounting Mar variance was $3,177,820 vs plan",06/10/2026 01:02:53 PM
+r31-0000054,jsanchez@foxhillsteel.com,Vendor Spend Analyzer,Explain the headcount variance vs plan,SUCCESS,46.9,"Ops May variance was $4,609,660 vs plan",06/10/2026 08:59:17 AM
+r31-0000055,sthomas@foxhillsteel.com,AP Aging Analyst,Which cost centers are over budget YTD?,SUCCESS,34.4,"Treasury May variance was $3,768,152 vs plan",06/13/2026 01:19:07 PM
+r31-0000056,sthomas@foxhillsteel.com,Close Checklist Bot,Draft flux commentary for the Mar close,SUCCESS,31.0,"Accounting Mar variance was $594,573 vs plan",06/13/2026 06:36:49 PM
+r31-0000057,jsanchez@foxhillsteel.com,Budget vs Actual,Forecast Jun operating cash flow,SUCCESS,60.6,"Ops Jun variance was $1,786,238 vs plan",06/14/2026 04:19:25 PM
+r31-0000058,jsanchez@foxhillsteel.com,Vendor Spend Analyzer,Explain the headcount variance vs plan,FAIL,1.1,FAILED: null reference in aggregation step,06/19/2026 07:37:13 PM
+r31-0000059,jsanchez@foxhillsteel.com,Variance Explainer,Build the board deck cash slide for Jan,SUCCESS,13.2,"FP&A Jan variance was $4,200,682 vs plan",06/22/2026 02:32:51 PM
+r31-0000060,jsanchez@foxhillsteel.com,AP Aging Analyst,Summarize the Jun variance for entity EU-04,SUCCESS,48.4,"Accounting Jun variance was $4,119,735 vs plan",06/22/2026 01:33:56 PM
+r31-0000061,sthomas@foxhillsteel.com,Revenue Recognizer,Draft flux commentary for the Jun close,SUCCESS,5.6,"FP&A Jun variance was $2,875,032 vs plan",06/24/2026 10:48:57 AM
+r31-0000062,jsanchez@foxhillsteel.com,Headcount Planner,Reconcile AP aging over 90 days for US-09,SUCCESS,23.9,"Accounting Apr variance was $983,966 vs plan",06/25/2026 04:47:28 PM
+r31-0000063,jsanchez@foxhillsteel.com,Close Checklist Bot,Build the board deck cash slide for May,SUCCESS,58.9,"Ops May variance was $2,276,191 vs plan",06/26/2026 12:35:22 PM
+r31-0000064,sthomas@foxhillsteel.com,Revenue Recognizer,What drove the change in gross margin this quarter?,SUCCESS,8.0,"Ops Apr variance was $2,472,586 vs plan",06/26/2026 11:54:24 AM
+r31-0000065,sthomas@foxhillsteel.com,Cash Forecaster,Check covenant compliance for the revolver,SUCCESS,21.3,"Ops Apr variance was $635,614 vs plan",06/27/2026 10:55:55 AM
+r31-0000066,jsanchez@foxhillsteel.com,Vendor Spend Analyzer,Which cost centers are over budget YTD?,SUCCESS,33.0,"FP&A Jun variance was $508,446 vs plan",06/29/2026 03:47:30 PM
+r31-0000053,jsanchez@foxhillsteel.com,Covenant Checker,Forecast Mar operating cash flow,SUCCESS,46.6,"Accounting Mar variance was $3,177,820 vs plan",06/10/2026 01:02:53 PM
+r31-0000061,sthomas@foxhillsteel.com,Revenue Recognizer,Draft flux commentary for the Jun close,SUCCESS,5.6,"FP&A Jun variance was $2,875,032 vs plan",06/24/2026 10:48:57 AM

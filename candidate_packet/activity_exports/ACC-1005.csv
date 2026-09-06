@@ -1,0 +1,64 @@
+run_id,user_email,agent_name,question_text,run_status,run_duration_sec,output_snippet,timestamp
+r05-0000001,wokafor@redstonechemicals.com,Close Checklist Bot,Draft flux commentary for the Apr close,completed,13.5,"Ops Apr variance was $1,631,801 vs plan",2026-03-02 10:20:34
+r05-0000002,fsanchez@redstonechemicals.com,Cash Forecaster,Why did FP&A spend exceed budget in Feb?,completed,47.0,"FP&A Feb variance was $2,381,128 vs plan",2026-03-05 12:52:15
+r05-0000003,fsanchez@redstonechemicals.com,Cash Forecaster,Explain the headcount variance vs plan,completed,53.9,"Accounting May variance was $739,469 vs plan",2026-03-06 12:12:47
+r05-0000004,fsanchez@redstonechemicals.com,Close Checklist Bot,Why did FP&A spend exceed budget in May?,completed,50.2,"FP&A May variance was $2,349,889 vs plan",2026-03-10 12:38:07
+r05-0000005,fsanchez@redstonechemicals.com,Journal Entry Reviewer,Build the board deck cash slide for Feb,completed,29.8,"Ops Feb variance was $2,083,805 vs plan",2026-03-11 10:51:24
+r05-0000006,fsanchez@redstonechemicals.com,Flux Commentary,Forecast Apr operating cash flow,completed,67.0,"Accounting Apr variance was $1,634,761 vs plan",2026-03-11 15:56:16
+r05-0000007,wokafor@redstonechemicals.com,Journal Entry Reviewer,Check covenant compliance for the revolver,error,3.3,ERROR: upstream request timed out,2026-03-11 09:08:20
+r05-0000008,wokafor@redstonechemicals.com,Variance Explainer,Summarize the Jan variance for entity EU-05,completed,0.7,Traceback (most recent call last): KeyError 'entity',2026-03-12 10:09:55
+r05-0000009,fsanchez@redstonechemicals.com,Flux Commentary,Check covenant compliance for the revolver,completed,1.2,Traceback (most recent call last): KeyError 'entity',2026-03-13 15:47:32
+r05-0000010,fsanchez@redstonechemicals.com,Close Checklist Bot,Why did Ops spend exceed budget in May?,error,5.4,error code 502 from model gateway,2026-03-16 12:02:58
+r05-0000011,wokafor@redstonechemicals.com,Variance Explainer,Draft flux commentary for the Jun close,completed,60.6,"FP&A Jun variance was $4,270,406 vs plan",2026-03-16 16:43:52
+r05-0000012,wokafor@redstonechemicals.com,AP Aging Analyst,Which cost centers are over budget YTD?,completed,41.4,"Accounting Apr variance was $2,449,378 vs plan",2026-03-18 13:06:11
+r05-0000013,fsanchez@redstonechemicals.com,Journal Entry Reviewer,Which cost centers are over budget YTD?,completed,57.1,"Treasury May variance was $3,832,772 vs plan",2026-03-19 12:22:49
+r05-0000014,wokafor@redstonechemicals.com,Close Checklist Bot,What drove the change in gross margin this quarter?,completed,45.5,"Ops Jun variance was $1,159,481 vs plan",2026-03-23 09:53:43
+r05-0000015,wokafor@redstonechemicals.com,Flux Commentary,Check covenant compliance for the revolver,completed,8.3,"Ops Jun variance was $1,612,297 vs plan",2026-03-25 08:55:59
+r05-0000016,wokafor@redstonechemicals.com,Vendor Spend Analyzer,Reconcile AP aging over 90 days for EU-05,completed,0.6,error code 502 from model gateway,2026-03-26 07:45:18
+r05-0000017,wokafor@redstonechemicals.com,Cash Forecaster,Summarize the Mar variance for entity EU-04,completed,54.8,"Accounting Mar variance was $3,027,549 vs plan",2026-03-27 16:47:38
+r05-0000018,wokafor@redstonechemicals.com,Budget vs Actual,Why did Accounting spend exceed budget in Feb?,error,3.1,ERROR: upstream request timed out,2026-03-31 17:08:57
+r05-0000019,wokafor@redstonechemicals.com,AP Aging Analyst,Check covenant compliance for the revolver,completed,36.2,"Accounting Jun variance was $1,633,868 vs plan",2026-03-31 15:04:03
+r05-0000020,fsanchez@redstonechemicals.com,Flux Commentary,Why did Treasury spend exceed budget in Apr?,completed,41.8,"Treasury Apr variance was $1,221,001 vs plan",2026-04-06 12:56:55
+r05-0000021,fsanchez@redstonechemicals.com,Revenue Recognizer,Summarize the Jun variance for entity CA-06,completed,8.7,"Ops Jun variance was $463,502 vs plan",2026-04-06 11:02:08
+r05-0000022,fsanchez@redstonechemicals.com,Headcount Planner,Explain the headcount variance vs plan,completed,48.3,"FP&A Feb variance was $2,614,049 vs plan",2026-04-06 15:57:02
+r05-0000023,wokafor@redstonechemicals.com,Vendor Spend Analyzer,What drove the change in gross margin this quarter?,completed,9.8,"Ops Jan variance was $3,421,989 vs plan",2026-04-07 06:39:09
+r05-0000024,fsanchez@redstonechemicals.com,Vendor Spend Analyzer,Draft flux commentary for the Jan close,completed,52.8,"FP&A Jan variance was $3,909,198 vs plan",2026-04-07 11:49:42
+r05-0000025,fsanchez@redstonechemicals.com,Flux Commentary,Why did FP&A spend exceed budget in Feb?,completed,21.7,"FP&A Feb variance was $3,562,901 vs plan",2026-04-07 06:36:24
+r05-0000026,wokafor@redstonechemicals.com,Cash Forecaster,Summarize the Apr variance for entity EU-01,completed,39.5,"Treasury Apr variance was $1,405,106 vs plan",2026-04-08 13:31:04
+r05-0000027,wokafor@redstonechemicals.com,Journal Entry Reviewer,Build the board deck cash slide for Apr,completed,45.7,"Ops Apr variance was $3,601,669 vs plan",2026-04-10 18:14:41
+r05-0000028,wokafor@redstonechemicals.com,Flux Commentary,Explain the headcount variance vs plan,completed,68.8,"Accounting Jan variance was $1,444,108 vs plan",2026-04-15 09:44:46
+r05-0000029,fsanchez@redstonechemicals.com,Headcount Planner,Forecast Jun operating cash flow,error,5.9,error code 502 from model gateway,2026-04-16 17:25:08
+r05-0000030,wokafor@redstonechemicals.com,Covenant Checker,Which cost centers are over budget YTD?,completed,27.6,"Treasury May variance was $1,044,777 vs plan",2026-04-24 11:36:20
+r05-0000031,fsanchez@redstonechemicals.com,Variance Explainer,Explain the headcount variance vs plan,completed,60.6,"FP&A Jun variance was $1,023,318 vs plan",2026-04-24 10:58:32
+r05-0000032,wokafor@redstonechemicals.com,Flux Commentary,Draft flux commentary for the Apr close,completed,26.7,"Accounting Apr variance was $1,417,212 vs plan",2026-04-26 11:16:43
+r05-0000033,wokafor@redstonechemicals.com,Board Deck Builder,Summarize the May variance for entity US-01,error,3.8,error: connection reset by peer,2026-04-27 14:46:33
+r05-0000034,wokafor@redstonechemicals.com,Cash Forecaster,Forecast Jun operating cash flow,completed,54.1,"Accounting Jun variance was $1,029,522 vs plan",2026-04-28 13:14:31
+r05-0000035,wokafor@redstonechemicals.com,Variance Explainer,Check covenant compliance for the revolver,completed,43.6,"Accounting Mar variance was $2,269,293 vs plan",2026-05-01 14:50:17
+r05-0000036,wokafor@redstonechemicals.com,Cash Forecaster,Draft flux commentary for the May close,completed,0.3,ERROR: upstream request timed out,2026-05-08 13:00:11
+r05-0000037,fsanchez@redstonechemicals.com,Vendor Spend Analyzer,What drove the change in gross margin this quarter?,completed,4.2,"Treasury Jun variance was $313,743 vs plan",2026-05-12 12:04:45
+r05-0000038,wokafor@redstonechemicals.com,Cash Forecaster,Draft flux commentary for the May close,completed,4.0,"Accounting May variance was $1,868,003 vs plan",2026-05-13 06:47:19
+r05-0000039,fsanchez@redstonechemicals.com,AP Aging Analyst,Forecast May operating cash flow,completed,37.1,"FP&A May variance was $3,322,610 vs plan",2026-05-14 07:16:44
+r05-0000040,wokafor@redstonechemicals.com,Flux Commentary,Why did Treasury spend exceed budget in Mar?,completed,1.6,ERROR: upstream request timed out,2026-05-15 08:18:09
+r05-0000041,wokafor@redstonechemicals.com,Close Checklist Bot,Draft flux commentary for the Apr close,completed,71.5,"FP&A Apr variance was $358,361 vs plan",2026-05-26 14:47:02
+r05-0000042,fsanchez@redstonechemicals.com,Board Deck Builder,Which cost centers are over budget YTD?,completed,55.1,"Treasury Jan variance was $2,495,322 vs plan",2026-05-27 15:14:56
+r05-0000043,wokafor@redstonechemicals.com,Vendor Spend Analyzer,Forecast Jan operating cash flow,completed,20.1,"Treasury Jan variance was $4,645,440 vs plan",2026-05-28 14:26:38
+r05-0000044,fsanchez@redstonechemicals.com,Cash Forecaster,Summarize the Apr variance for entity CA-08,completed,60.2,"Treasury Apr variance was $4,088,782 vs plan",2026-05-28 12:59:34
+r05-0000045,fsanchez@redstonechemicals.com,AP Aging Analyst,Explain the headcount variance vs plan,completed,12.3,"FP&A Mar variance was $711,900 vs plan",2026-05-28 15:51:56
+r05-0000046,wokafor@redstonechemicals.com,Revenue Recognizer,Check covenant compliance for the revolver,completed,22.3,"FP&A Feb variance was $65,991 vs plan",2026-05-29 11:54:50
+r05-0000047,wokafor@redstonechemicals.com,Revenue Recognizer,Summarize the Jan variance for entity CA-04,completed,59.0,"Treasury Jan variance was $2,336,093 vs plan",2026-05-29 12:14:02
+r05-0000048,fsanchez@redstonechemicals.com,Revenue Recognizer,Check covenant compliance for the revolver,completed,10.9,"Treasury Apr variance was $2,997,691 vs plan",2026-06-08 15:58:26
+r05-0000049,wokafor@redstonechemicals.com,Variance Explainer,Check covenant compliance for the revolver,completed,25.0,"FP&A Mar variance was $3,883,499 vs plan",2026-06-09 10:48:02
+r05-0000050,wokafor@redstonechemicals.com,Vendor Spend Analyzer,Forecast Mar operating cash flow,completed,5.9,"Ops Mar variance was $702,585 vs plan",2026-06-11 14:21:27
+r05-0000051,fsanchez@redstonechemicals.com,Board Deck Builder,Reconcile AP aging over 90 days for CA-06,completed,64.8,"FP&A Apr variance was $2,180,227 vs plan",2026-06-11 15:26:23
+r05-0000052,fsanchez@redstonechemicals.com,Board Deck Builder,Explain the headcount variance vs plan,completed,14.0,"Ops May variance was $200,448 vs plan",2026-06-18 07:09:54
+r05-0000053,fsanchez@redstonechemicals.com,Flux Commentary,What drove the change in gross margin this quarter?,completed,71.9,"Accounting May variance was $4,473,694 vs plan",2026-06-18 13:21:21
+r05-0000054,fsanchez@redstonechemicals.com,Cash Forecaster,Build the board deck cash slide for May,completed,46.8,"Treasury May variance was $945,346 vs plan",2026-06-22 19:09:19
+r05-0000055,fsanchez@redstonechemicals.com,Covenant Checker,Build the board deck cash slide for Feb,completed,57.0,"FP&A Feb variance was $4,391,849 vs plan",2026-06-25 13:07:25
+r05-0000056,fsanchez@redstonechemicals.com,Covenant Checker,Explain the headcount variance vs plan,completed,5.8,"Accounting Feb variance was $1,512,054 vs plan",2026-06-25 10:10:40
+r05-0000057,fsanchez@redstonechemicals.com,Budget vs Actual,Forecast May operating cash flow,completed,5.7,"Accounting May variance was $83,883 vs plan",2026-06-25 13:59:04
+r05-0000058,fsanchez@redstonechemicals.com,Journal Entry Reviewer,Summarize the Feb variance for entity US-07,completed,48.2,"Accounting Feb variance was $1,296,777 vs plan",2026-06-26 12:05:11
+r05-0000059,wokafor@redstonechemicals.com,Budget vs Actual,Explain the headcount variance vs plan,completed,26.5,"Treasury Mar variance was $2,149,079 vs plan",2026-06-28 09:05:28
+r05-0000060,wokafor@redstonechemicals.com,Revenue Recognizer,Why did FP&A spend exceed budget in Mar?,completed,3.9,"FP&A Mar variance was $2,668,604 vs plan",2026-06-29 07:11:14
+r05-0000061,wokafor@redstonechemicals.com,Headcount Planner,Check covenant compliance for the revolver,completed,0.3,ERROR: upstream request timed out,2026-06-30 16:01:50
+r05-0000053,fsanchez@redstonechemicals.com,Flux Commentary,What drove the change in gross margin this quarter?,completed,71.9,"Accounting May variance was $4,473,694 vs plan",2026-06-18 13:21:21
+r05-0000012,wokafor@redstonechemicals.com,AP Aging Analyst,Which cost centers are over budget YTD?,completed,41.4,"Accounting Apr variance was $2,449,378 vs plan",2026-03-18 13:06:11
