@@ -864,6 +864,7 @@ def build_findings(accounts: list[dict[str, Any]]) -> list[dict[str, Any]]:
     should act on it.
     """
     findings: list[dict[str, Any]] = []
+    rank_of = {a["account_name"]: i for i, a in enumerate(accounts, 1)}
 
     # 1. Simultaneous collapses across unrelated accounts
     # Cluster by date proximity, not calendar week — a real event that lands on
@@ -943,11 +944,49 @@ def build_findings(accounts: list[dict[str, Any]]) -> list[dict[str, Any]]:
                     else "Work these accounts individually."
                 ),
                 "accounts": [a["account_name"] for a in group],
+                # Scored as if independent — kept so the reader can see what the
+                # ranking would have said, and why that would have been wrong.
+                "members": sorted(
+                    (
+                        {
+                            "account": a["account_name"],
+                            "arr": a["arr"],
+                            "owner": a.get("owner"),
+                            "stage": a.get("stage"),
+                            "renewal_date": a.get("renewal_date"),
+                            "days_to_renewal": a.get("days_to_renewal"),
+                            "drop_pct": a["usage_cliff"]["drop_pct"],
+                            "users_retained": a["usage_cliff"]["users_retained"],
+                            "users_before": a["usage_cliff"]["users_before"],
+                            "date": a["usage_cliff"]["date"],
+                            "would_be_rank": rank_of.get(a["account_name"]),
+                            "would_be_tier": a.get("risk_tier"),
+                        }
+                        for a in group
+                    ),
+                    key=lambda m: -m["arr"],
+                ),
                 "date": onset,
                 "arr_at_stake": arr,
                 "systemic": looks_systemic,
             }
         )
+        if looks_systemic:
+            ranks = sorted(r for a in group if (r := rank_of.get(a["account_name"])))
+            order = ["red", "amber", "green"]
+            present = [t for t in order if any(a.get("risk_tier") == t for a in group)]
+            spread = (
+                f" — the same event reading as {present[0]} for one account and "
+                f"{present[-1]} for another"
+                if len(present) > 1
+                else ""
+            )
+            findings[-1]["evidence"].append(
+                "Scored as independent accounts they land at ranks "
+                + ", ".join(str(r) for r in ranks)
+                + spread
+                + ", which is why they are handled as one item here."
+            )
 
     # 2. Accounts missing from the export that are demonstrably still alive
     missing = [a for a in accounts if not a.get("usage_data_available")]
@@ -1255,10 +1294,23 @@ def build_accounts(
 
     accounts.sort(key=lambda a: (-a["attention_score"], -a["arr"]))
     findings = build_findings(accounts)
-    cliff_names = {n for f in findings if f["kind"] == "shared_usage_cliff" for n in f["accounts"]}
+
+    # Accounts whose drop is attributed to one shared cause are handled as a
+    # cohort, not as independent per-account plays. Only a systemic verdict
+    # earns this — a "mixed signals" cluster stays in the ranked list.
+    cohort_of = {
+        n: f
+        for f in findings
+        if f["kind"] == "shared_usage_cliff" and f["systemic"]
+        for n in f["accounts"]
+    }
     for a in accounts:
-        if a["account_name"] in cliff_names:
-            a["risk_tags"] = sorted(set(a.get("risk_tags", [])) | {"shared_usage_cliff"})
+        f = cohort_of.get(a["account_name"])
+        if f:
+            a["cliff_cohort"] = f["date"]
+            a["risk_tags"] = sorted(set(a.get("risk_tags", [])) | {"cliff_cohort"})
+        else:
+            a["cliff_cohort"] = None
 
     meta = {
         "as_of": AS_OF.date().isoformat(),

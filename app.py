@@ -73,7 +73,7 @@ TAG_LABELS = {
     "csm_churn": "CSM turnover",
     "seniority_drift": "Seniority drift",
     "stuck_action_item": "Stuck action item",
-    "shared_usage_cliff": "Shared usage cliff",
+    "cliff_cohort": "Shared usage cliff",
 }
 
 NOTE_TAG_LABELS = {
@@ -297,14 +297,44 @@ def render_findings(findings: list[dict]) -> None:
 
     for f in findings:
         systemic = f.get("systemic")
+        members = f.get("members") or []
         with st.container(border=True):
             st.markdown(f"**{f['headline']}**")
             (st.warning if systemic else st.info)(f["verdict"])
             st.markdown("\n".join(f"- {e}" for e in f.get("evidence", [])))
             st.markdown(f"**Do this:** {f['action']}")
-            names = f.get("accounts", [])
-            if names:
-                st.caption("Accounts: " + ", ".join(names))
+
+            if members:
+                # The cohort is worked as one item, so it gets one table rather
+                # than five rows scattered through a list of per-account plays.
+                rows = [
+                    {
+                        "Account": m["account"],
+                        "ARR": m["arr"],
+                        "Owner": m.get("owner") or "—",
+                        "Renewal": fmt_renewal(m),
+                        "Usage drop": f"{abs(m['drop_pct']):.0f}%",
+                        "Users kept": f"{m['users_retained']}/{m['users_before']}",
+                        "Dropped on": m["date"],
+                    }
+                    for m in members
+                ]
+                st.dataframe(
+                    pd.DataFrame(rows),
+                    hide_index=True,
+                    use_container_width=True,
+                    column_config={
+                        "ARR": st.column_config.NumberColumn("ARR", format="$%,d")
+                    },
+                )
+                st.caption(
+                    "These are held out of the ranked list below — the list is for "
+                    "per-account plays, and this is one investigation."
+                )
+            else:
+                names = f.get("accounts", [])
+                if names:
+                    st.caption("Accounts: " + ", ".join(names))
 
 
 def main() -> None:
@@ -350,8 +380,29 @@ def main() -> None:
 
     render_findings(meta.get("findings", []))
 
-    owners = sorted({a.get("owner") or "—" for a in accounts})
-    stages = sorted({a.get("stage") or "—" for a in accounts})
+    cohort = [a for a in accounts if a.get("cliff_cohort")]
+    if cohort:
+        show_cohort = st.checkbox(
+            f"Also rank the {len(cohort)} shared-cliff accounts here",
+            value=False,
+            help=(
+                "Off by default: their drop has one shared cause, so they are "
+                "handled as a cohort above. Turn on to audit how they would score "
+                "if treated as independent accounts."
+            ),
+        )
+    else:
+        show_cohort = True
+
+    ranked = accounts if show_cohort else [a for a in accounts if not a.get("cliff_cohort")]
+    if cohort and not show_cohort:
+        st.caption(
+            f"{len(cohort)} accounts ({fmt_arr(sum(a['arr'] for a in cohort))}) are "
+            "held out and handled in the shared-cliff block above."
+        )
+
+    owners = sorted({a.get("owner") or "—" for a in ranked})
+    stages = sorted({a.get("stage") or "—" for a in ranked})
 
     f1, f2, f3, f4 = st.columns(4)
     owner_f = f1.multiselect("Owner", owners)
@@ -368,7 +419,7 @@ def main() -> None:
     )
     at_risk = f4.checkbox("At-risk only (red + amber)", value=False)
 
-    filtered = accounts
+    filtered = ranked
     if owner_f:
         filtered = [a for a in filtered if a.get("owner") in owner_f]
     if stage_f:
@@ -472,12 +523,16 @@ def main() -> None:
     )
 
     st.subheader("Account drilldown")
+    # Held-out cohort accounts stay inspectable — they are out of the ranking,
+    # not out of the tool.
+    drill = filtered + [a for a in cohort if a not in filtered]
     labels = [
         f"{a['account_name']}  ·  {a['attention_score']}  ·  {a['risk_tier']}"
-        for a in filtered
+        + ("  ·  shared cliff" if a.get("cliff_cohort") else "")
+        for a in drill
     ]
     choice = st.selectbox("Select account", labels, index=0)
-    acct = filtered[labels.index(choice)]
+    acct = drill[labels.index(choice)]
 
     tier = acct.get("risk_tier", "green")
     st.markdown(
@@ -683,10 +738,12 @@ def main() -> None:
                     ]
                 )
             )
-            if "shared_usage_cliff" in (acct.get("risk_tags") or []):
+            if acct.get("cliff_cohort"):
                 st.warning(
-                    "Other accounts dropped on the same date — see the finding at "
-                    "the top of the page before treating this as account-specific."
+                    "This account is part of the shared-cliff cohort, so it is held "
+                    "out of the ranked list. Its usage score still reflects the drop "
+                    "as if it were account-specific — treat that score as an upper "
+                    "bound until the shared cause is ruled in or out."
                 )
 
     with st.expander("Data trust"):

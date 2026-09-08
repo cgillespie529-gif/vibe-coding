@@ -45,7 +45,11 @@ A ranked list shows symptoms one row at a time. Two patterns in this data only a
 - It spans four verticals and two owners, and their notes name no cause
 - Portfolio-wide volume is flat across the same week, so it is not a platform outage
 
-Five unrelated accounts do not cut usage 92% overnight on the same day. That signature — same users, same agents, no errors, one date — points upstream, at a metering, export or quota change. Worth one escalation, not five save plays. The five are tagged `shared_usage_cliff` and the drilldown links back to the finding.
+Five unrelated accounts do not cut usage 92% overnight on the same day. That signature — same users, same agents, no errors, one date — points upstream, at a metering, export or quota change. Worth one escalation, not five save plays.
+
+**So the cohort is held out of the ranked list.** Scoring them independently put them at ranks 2, 3, 9, 16 and 19, with the same event reading as red for Stanton and green for Copperline — which is the largest of the five at $3.98M. That gives the reader two contradictory instructions from one screen: the finding says treat it as one thing, the list says work five separate accounts at five different priorities. Instead the five are tagged `cliff_cohort`, shown as one block with their combined $12.4M, and the ranked list is what remains after the systemic issue is handled. A checkbox re-ranks them inline for auditing, and they stay fully available in the drilldown — out of the ranking, not out of the tool.
+
+Only a **systemic** verdict earns the hold-out. A cluster with mixed signals — users gone, or errors spiking — stays in the ranked list, because then it probably is churn.
 
 Detection is a step test, not a slope test (`detect_usage_cliff`): the 7 days after a candidate day must fall ≥70% against the 7 days before **and** stay down. Comparing period averages instead fires early and also catches gradual decliners, which are a different problem.
 

@@ -1,7 +1,7 @@
 {
   "meta": {
     "as_of": "2026-06-30",
-    "generated_at": "2026-09-08T01:17:09.349058+00:00",
+    "generated_at": "2026-09-08T01:37:05.984003+00:00",
     "crm_rows": 56,
     "canonical_accounts": 53,
     "activity_files_ingested": 47,
@@ -95,7 +95,8 @@
           "91 of 96 users kept running after the drop \u2014 the people did not leave",
           "No error-rate spike in any account",
           "Spans 4 verticals and 2 owners: building products, food distribution, healthcare services, restaurant franchising",
-          "Volume per account fell from 75 to 6 runs/day"
+          "Volume per account fell from 75 to 6 runs/day",
+          "Scored as independent accounts they land at ranks 2, 3, 9, 16, 19 \u2014 the same event reading as red for one account and green for another, which is why they are handled as one item here."
         ],
         "action": "Check what shipped on this date (metering, export, quota) before opening churn plays. If it is real, it is a coordinated event worth one escalation.",
         "accounts": [
@@ -104,6 +105,78 @@
           "Sierra Restaurant Holdings",
           "Summit Health Partners",
           "Copperline Foods"
+        ],
+        "members": [
+          {
+            "account": "Copperline Foods",
+            "arr": 3980000.0,
+            "owner": "Telli D.",
+            "stage": "Live",
+            "renewal_date": "2027-03-13",
+            "days_to_renewal": 256,
+            "drop_pct": -92.8,
+            "users_retained": 21,
+            "users_before": 22,
+            "date": "2026-05-22",
+            "would_be_rank": 19,
+            "would_be_tier": "green"
+          },
+          {
+            "account": "Stanton Health Services",
+            "arr": 3890000.0,
+            "owner": "Rae G.",
+            "stage": "Live",
+            "renewal_date": "2026-07-20",
+            "days_to_renewal": 20,
+            "drop_pct": -91.6,
+            "users_retained": 19,
+            "users_before": 19,
+            "date": "2026-05-22",
+            "would_be_rank": 2,
+            "would_be_tier": "red"
+          },
+          {
+            "account": "Sierra Restaurant Holdings",
+            "arr": 2125000.0,
+            "owner": "Telli D.",
+            "stage": "Live",
+            "renewal_date": "2026-12-15",
+            "days_to_renewal": 168,
+            "drop_pct": -91.3,
+            "users_retained": 18,
+            "users_before": 19,
+            "date": "2026-05-22",
+            "would_be_rank": 3,
+            "would_be_tier": "amber"
+          },
+          {
+            "account": "Summit Health Partners",
+            "arr": 1395000.0,
+            "owner": "Rae G.",
+            "stage": "Live",
+            "renewal_date": "2027-01-28",
+            "days_to_renewal": 212,
+            "drop_pct": -93.2,
+            "users_retained": 15,
+            "users_before": 18,
+            "date": "2026-05-22",
+            "would_be_rank": 9,
+            "would_be_tier": "amber"
+          },
+          {
+            "account": "Coastal Building Systems",
+            "arr": 1005000.0,
+            "owner": "Rae G.",
+            "stage": "Live",
+            "renewal_date": "2027-09-05",
+            "days_to_renewal": 432,
+            "drop_pct": -91.4,
+            "users_retained": 18,
+            "users_before": 18,
+            "date": "2026-05-21",
+            "would_be_rank": 16,
+            "would_be_tier": "amber"
+          }
         ],
         "date": "2026-05-22",
         "arr_at_stake": 12395000.0,
@@ -256,7 +329,8 @@
         "security_stuck",
         "csm_churn"
       ],
-      "risk_tier": "red"
+      "risk_tier": "red",
+      "cliff_cohort": null
     },
     {
       "account_id_canonical": "ACC-1009",
@@ -383,11 +457,12 @@
         "Seat adoption: Healthy seat adoption (67% active) \u2014 1/15 pts"
       ],
       "risk_tags": [
+        "cliff_cohort",
         "no_recent_contact",
-        "renewal_soon",
-        "shared_usage_cliff"
+        "renewal_soon"
       ],
-      "risk_tier": "red"
+      "risk_tier": "red",
+      "cliff_cohort": "2026-05-22"
     },
     {
       "account_id_canonical": "ACC-1027",
@@ -513,10 +588,11 @@
         "Reliability: Runs are mostly reliable (3% errors) \u2014 1/15 pts"
       ],
       "risk_tags": [
-        "no_recent_contact",
-        "shared_usage_cliff"
+        "cliff_cohort",
+        "no_recent_contact"
       ],
-      "risk_tier": "amber"
+      "risk_tier": "amber",
+      "cliff_cohort": "2026-05-22"
     },
     {
       "account_id_canonical": "ACC-1004",
@@ -633,7 +709,8 @@
         "renewal_soon",
         "no_recent_contact"
       ],
-      "risk_tier": "amber"
+      "risk_tier": "amber",
+      "cliff_cohort": null
     },
     {
       "account_id_canonical": "ACC-1005",
@@ -756,7 +833,8 @@
         "no_recent_contact",
         "seniority_drift"
       ],
-      "risk_tier": "amber"
+      "risk_tier": "amber",
+      "cliff_cohort": null
     },
     {
       "account_id_canonical": "ACC-1031",
@@ -877,7 +955,8 @@
       "risk_tags": [
         "security_stuck"
       ],
-      "risk_tier": "amber"
+      "risk_tier": "amber",
+      "cliff_cohort": null
     },
     {
       "account_id_canonical": "ACC-1007",
@@ -1027,7 +1106,8 @@
         "seniority_drift",
         "stuck_action_item"
       ],
-      "risk_tier": "amber"
+      "risk_tier": "amber",
+      "cliff_cohort": null
     },
     {
       "account_id_canonical": "ACC-1003",
@@ -1164,7 +1244,8 @@
         "seniority_drift",
         "stuck_action_item"
       ],
-      "risk_tier": "amber"
+      "risk_tier": "amber",
+      "cliff_cohort": null
     },
     {
       "account_id_canonical": "ACC-1044",
@@ -1288,9 +1369,10 @@
         "Relationship health: Relationship: no dated call notes \u2014 3/15 pts"
       ],
       "risk_tags": [
-        "shared_usage_cliff"
+        "cliff_cohort"
       ],
-      "risk_tier": "amber"
+      "risk_tier": "amber",
+      "cliff_cohort": "2026-05-22"
     },
     {
       "account_id_canonical": "ACC-1023",
@@ -1411,7 +1493,8 @@
         "security_stuck",
         "no_recent_contact"
       ],
-      "risk_tier": "amber"
+      "risk_tier": "amber",
+      "cliff_cohort": null
     },
     {
       "account_id_canonical": "ACC-1051",
@@ -1532,7 +1615,8 @@
         "csm_churn",
         "seniority_drift"
       ],
-      "risk_tier": "amber"
+      "risk_tier": "amber",
+      "cliff_cohort": null
     },
     {
       "account_id_canonical": "ACC-1048",
@@ -1647,7 +1731,8 @@
       "risk_tags": [
         "onboarding_stalled"
       ],
-      "risk_tier": "amber"
+      "risk_tier": "amber",
+      "cliff_cohort": null
     },
     {
       "account_id_canonical": "ACC-1040",
@@ -1759,7 +1844,8 @@
         "Reliability: Runs are mostly reliable (0% errors) \u2014 1/15 pts"
       ],
       "risk_tags": [],
-      "risk_tier": "amber"
+      "risk_tier": "amber",
+      "cliff_cohort": null
     },
     {
       "account_id_canonical": "ACC-1014",
@@ -1887,7 +1973,8 @@
         "csm_churn",
         "stuck_action_item"
       ],
-      "risk_tier": "amber"
+      "risk_tier": "amber",
+      "cliff_cohort": null
     },
     {
       "account_id_canonical": "ACC-1039",
@@ -2023,7 +2110,8 @@
         "csm_churn",
         "stuck_action_item"
       ],
-      "risk_tier": "amber"
+      "risk_tier": "amber",
+      "cliff_cohort": null
     },
     {
       "account_id_canonical": "ACC-1018",
@@ -2149,10 +2237,11 @@
         "Seat adoption: Healthy seat adoption (62% active) \u2014 1/15 pts"
       ],
       "risk_tags": [
-        "no_recent_contact",
-        "shared_usage_cliff"
+        "cliff_cohort",
+        "no_recent_contact"
       ],
-      "risk_tier": "amber"
+      "risk_tier": "amber",
+      "cliff_cohort": "2026-05-22"
     },
     {
       "account_id_canonical": "ACC-1008",
@@ -2295,7 +2384,8 @@
         "csm_churn",
         "stuck_action_item"
       ],
-      "risk_tier": "amber"
+      "risk_tier": "amber",
+      "cliff_cohort": null
     },
     {
       "account_id_canonical": "ACC-1001",
@@ -2416,7 +2506,8 @@
         "csm_churn",
         "seniority_drift"
       ],
-      "risk_tier": "green"
+      "risk_tier": "green",
+      "cliff_cohort": null
     },
     {
       "account_id_canonical": "ACC-1002",
@@ -2541,9 +2632,10 @@
         "Seat adoption: Healthy seat adoption (60% active) \u2014 1/15 pts"
       ],
       "risk_tags": [
-        "shared_usage_cliff"
+        "cliff_cohort"
       ],
-      "risk_tier": "green"
+      "risk_tier": "green",
+      "cliff_cohort": "2026-05-22"
     },
     {
       "account_id_canonical": "ACC-1000",
@@ -2666,7 +2758,8 @@
         "bot_heavy",
         "no_recent_contact"
       ],
-      "risk_tier": "green"
+      "risk_tier": "green",
+      "cliff_cohort": null
     },
     {
       "account_id_canonical": "ACC-1010",
@@ -2802,7 +2895,8 @@
         "seniority_drift",
         "stuck_action_item"
       ],
-      "risk_tier": "green"
+      "risk_tier": "green",
+      "cliff_cohort": null
     },
     {
       "account_id_canonical": "ACC-1028",
@@ -2947,7 +3041,8 @@
         "seniority_drift",
         "stuck_action_item"
       ],
-      "risk_tier": "green"
+      "risk_tier": "green",
+      "cliff_cohort": null
     },
     {
       "account_id_canonical": "ACC-1021",
@@ -3076,7 +3171,8 @@
         "seniority_drift",
         "stuck_action_item"
       ],
-      "risk_tier": "green"
+      "risk_tier": "green",
+      "cliff_cohort": null
     },
     {
       "account_id_canonical": "ACC-1017",
@@ -3215,7 +3311,8 @@
         "csm_churn",
         "stuck_action_item"
       ],
-      "risk_tier": "green"
+      "risk_tier": "green",
+      "cliff_cohort": null
     },
     {
       "account_id_canonical": "ACC-1033",
@@ -3329,7 +3426,8 @@
       "risk_tags": [
         "bot_heavy"
       ],
-      "risk_tier": "green"
+      "risk_tier": "green",
+      "cliff_cohort": null
     },
     {
       "account_id_canonical": "ACC-1050",
@@ -3448,7 +3546,8 @@
         "bot_heavy",
         "csm_churn"
       ],
-      "risk_tier": "green"
+      "risk_tier": "green",
+      "cliff_cohort": null
     },
     {
       "account_id_canonical": "ACC-1032",
@@ -3567,7 +3666,8 @@
         "no_recent_contact",
         "csm_churn"
       ],
-      "risk_tier": "green"
+      "risk_tier": "green",
+      "cliff_cohort": null
     },
     {
       "account_id_canonical": "ACC-1026",
@@ -3696,7 +3796,8 @@
         "seniority_drift",
         "stuck_action_item"
       ],
-      "risk_tier": "green"
+      "risk_tier": "green",
+      "cliff_cohort": null
     },
     {
       "account_id_canonical": "ACC-1042",
@@ -3824,7 +3925,8 @@
         "csm_churn",
         "stuck_action_item"
       ],
-      "risk_tier": "green"
+      "risk_tier": "green",
+      "cliff_cohort": null
     },
     {
       "account_id_canonical": "ACC-1029",
@@ -3947,7 +4049,8 @@
         "seasonal_low",
         "seniority_drift"
       ],
-      "risk_tier": "green"
+      "risk_tier": "green",
+      "cliff_cohort": null
     },
     {
       "account_id_canonical": "ACC-1045",
@@ -4076,7 +4179,8 @@
         "csm_churn",
         "stuck_action_item"
       ],
-      "risk_tier": "green"
+      "risk_tier": "green",
+      "cliff_cohort": null
     },
     {
       "account_id_canonical": "ACC-1038",
@@ -4205,7 +4309,8 @@
         "csm_churn",
         "stuck_action_item"
       ],
-      "risk_tier": "green"
+      "risk_tier": "green",
+      "cliff_cohort": null
     },
     {
       "account_id_canonical": "ACC-1049",
@@ -4320,7 +4425,8 @@
       "risk_tags": [
         "usage_unknown"
       ],
-      "risk_tier": "green"
+      "risk_tier": "green",
+      "cliff_cohort": null
     },
     {
       "account_id_canonical": "ACC-1030",
@@ -4456,7 +4562,8 @@
         "seniority_drift",
         "stuck_action_item"
       ],
-      "risk_tier": "green"
+      "risk_tier": "green",
+      "cliff_cohort": null
     },
     {
       "account_id_canonical": "ACC-1041",
@@ -4586,7 +4693,8 @@
         "seniority_drift",
         "stuck_action_item"
       ],
-      "risk_tier": "green"
+      "risk_tier": "green",
+      "cliff_cohort": null
     },
     {
       "account_id_canonical": "ACC-1015",
@@ -4701,7 +4809,8 @@
       "risk_tags": [
         "bot_heavy"
       ],
-      "risk_tier": "green"
+      "risk_tier": "green",
+      "cliff_cohort": null
     },
     {
       "account_id_canonical": "ACC-1025",
@@ -4829,7 +4938,8 @@
         "csm_churn",
         "stuck_action_item"
       ],
-      "risk_tier": "green"
+      "risk_tier": "green",
+      "cliff_cohort": null
     },
     {
       "account_id_canonical": "ACC-1020",
@@ -4944,7 +5054,8 @@
       "risk_tags": [
         "usage_unknown"
       ],
-      "risk_tier": "green"
+      "risk_tier": "green",
+      "cliff_cohort": null
     },
     {
       "account_id_canonical": "ACC-1047",
@@ -5088,7 +5199,8 @@
         "seniority_drift",
         "stuck_action_item"
       ],
-      "risk_tier": "green"
+      "risk_tier": "green",
+      "cliff_cohort": null
     },
     {
       "account_id_canonical": "ACC-1043",
@@ -5211,7 +5323,8 @@
         "csm_churn",
         "seniority_drift"
       ],
-      "risk_tier": "green"
+      "risk_tier": "green",
+      "cliff_cohort": null
     },
     {
       "account_id_canonical": "ACC-1046",
@@ -5329,7 +5442,8 @@
       "risk_tags": [
         "csm_churn"
       ],
-      "risk_tier": "green"
+      "risk_tier": "green",
+      "cliff_cohort": null
     },
     {
       "account_id_canonical": "ACC-1016",
@@ -5462,7 +5576,8 @@
         "csm_churn",
         "stuck_action_item"
       ],
-      "risk_tier": "green"
+      "risk_tier": "green",
+      "cliff_cohort": null
     },
     {
       "account_id_canonical": "ACC-1022",
@@ -5578,7 +5693,8 @@
         "Seat adoption: Healthy seat adoption (73% active) \u2014 1/15 pts"
       ],
       "risk_tags": [],
-      "risk_tier": "green"
+      "risk_tier": "green",
+      "cliff_cohort": null
     },
     {
       "account_id_canonical": "ACC-1036",
@@ -5693,7 +5809,8 @@
       "risk_tags": [
         "usage_unknown"
       ],
-      "risk_tier": "green"
+      "risk_tier": "green",
+      "cliff_cohort": null
     },
     {
       "account_id_canonical": "ACC-1024",
@@ -5808,7 +5925,8 @@
       "risk_tags": [
         "usage_unknown"
       ],
-      "risk_tier": "green"
+      "risk_tier": "green",
+      "cliff_cohort": null
     },
     {
       "account_id_canonical": "ACC-1052",
@@ -5928,7 +6046,8 @@
         "no_recent_contact",
         "csm_churn"
       ],
-      "risk_tier": "green"
+      "risk_tier": "green",
+      "cliff_cohort": null
     },
     {
       "account_id_canonical": "ACC-1019",
@@ -6056,7 +6175,8 @@
         "csm_churn",
         "stuck_action_item"
       ],
-      "risk_tier": "green"
+      "risk_tier": "green",
+      "cliff_cohort": null
     },
     {
       "account_id_canonical": "ACC-1011",
@@ -6185,7 +6305,8 @@
         "csm_churn",
         "stuck_action_item"
       ],
-      "risk_tier": "green"
+      "risk_tier": "green",
+      "cliff_cohort": null
     },
     {
       "account_id_canonical": "ACC-1035",
@@ -6312,7 +6433,8 @@
         "seniority_drift",
         "stuck_action_item"
       ],
-      "risk_tier": "green"
+      "risk_tier": "green",
+      "cliff_cohort": null
     },
     {
       "account_id_canonical": "ACC-1013",
@@ -6429,7 +6551,8 @@
       "risk_tags": [
         "usage_unknown"
       ],
-      "risk_tier": "green"
+      "risk_tier": "green",
+      "cliff_cohort": null
     },
     {
       "account_id_canonical": "ACC-1034",
@@ -6557,7 +6680,8 @@
         "csm_churn",
         "stuck_action_item"
       ],
-      "risk_tier": "green"
+      "risk_tier": "green",
+      "cliff_cohort": null
     },
     {
       "account_id_canonical": "ACC-1006",
@@ -6672,7 +6796,8 @@
         "Seat adoption: Healthy seat adoption (79% active) \u2014 1/15 pts"
       ],
       "risk_tags": [],
-      "risk_tier": "green"
+      "risk_tier": "green",
+      "cliff_cohort": null
     },
     {
       "account_id_canonical": "ACC-1037",
@@ -6788,7 +6913,8 @@
       "risk_tags": [
         "no_recent_contact"
       ],
-      "risk_tier": "green"
+      "risk_tier": "green",
+      "cliff_cohort": null
     }
   ]
 }
