@@ -255,8 +255,9 @@ def active_upload_meta(meta: dict) -> dict | None:
 
 def render_upload_bar(data_as_of: date | None = None, meta: dict | None = None) -> None:
     upload_meta = active_upload_meta(meta or {})
-    with st.container(border=True):
-        st.markdown("**Daily data refresh**")
+    # Collapsed by default: it is a once-a-day action, not something the reader
+    # needs open while working the list.
+    with st.expander("Daily data refresh", expanded=False):
         st.caption(
             "Upload today’s nightly dump to replace the active dataset. "
             "Accepts a **packet ZIP** (`crm_export.csv`, `activity_exports/`, "
@@ -326,7 +327,15 @@ def render_findings(findings: list[dict]) -> None:
     if not findings:
         return
 
-    st.subheader("What the data is telling you")
+    systemic_n = sum(1 for f in findings if f.get("systemic"))
+    title = f"What the data is telling you ({len(findings)})"
+    if systemic_n:
+        title += f" — {systemic_n} needing action before the list"
+    with st.expander(title, expanded=True):
+        render_findings_body(findings)
+
+
+def render_findings_body(findings: list[dict]) -> None:
     st.caption(
         "Patterns that cut across accounts. These are detected from the data on "
         "every refresh, not hand-written, so they update with each upload."
@@ -417,15 +426,26 @@ def main() -> None:
         if a.get("days_to_renewal") is not None and a["days_to_renewal"] <= 90
     )
 
-    c1, c2, c3, c4 = st.columns(4)
-    c1.metric("Portfolio ARR", fmt_arr(total_arr))
-    c2.metric("ARR in red tier", fmt_arr(red_arr))
-    c3.metric("Onboarding", n_onb)
-    c4.metric("Renewing ≤90d", n_ren)
+    with st.expander("Portfolio summary", expanded=True):
+        c1, c2, c3, c4 = st.columns(4)
+        c1.metric("Portfolio ARR", fmt_arr(total_arr))
+        c2.metric("ARR in red tier", fmt_arr(red_arr))
+        c3.metric("Onboarding", n_onb)
+        c4.metric("Renewing ≤90d", n_ren)
 
     render_findings(meta.get("findings", []))
 
     cohort = [a for a in accounts if a.get("cliff_cohort")]
+    with st.expander("Ranked attention list", expanded=True):
+        filtered = render_ranked_list(accounts, cohort)
+
+    with st.expander("Account drilldown", expanded=True):
+        render_drilldown(filtered, cohort, meta)
+
+    render_data_trust(meta, upload_meta)
+
+
+def render_ranked_list(accounts: list[dict], cohort: list[dict]) -> list[dict]:
     if cohort:
         show_cohort = st.checkbox(
             f"Also rank the {len(cohort)} shared-cliff accounts here",
@@ -501,7 +521,7 @@ def main() -> None:
         )
     df = pd.DataFrame(rows)
 
-    st.subheader(f"Ranked attention list ({len(df)})")
+    st.caption(f"**{len(df)} accounts**")
     st.caption(
         "Highest-attention accounts first by default. **Score** (max 100) is the sum of six factors: "
         "renewal urgency (≤25), usage health (≤25), reliability (≤15), seat adoption (≤15), "
@@ -512,7 +532,7 @@ def main() -> None:
     )
     if df.empty:
         st.info("No accounts match filters.")
-        st.stop()
+        return filtered
 
     show_factor_cols = st.checkbox(
         "Show points for every factor",
@@ -566,11 +586,16 @@ def main() -> None:
         },
         height=420,
     )
+    return filtered
 
-    st.subheader("Account drilldown")
+
+def render_drilldown(filtered: list[dict], cohort: list[dict], meta: dict) -> None:
     # Held-out cohort accounts stay inspectable — they are out of the ranking,
     # not out of the tool.
     drill = filtered + [a for a in cohort if a not in filtered]
+    if not drill:
+        st.info("No accounts match the current filters.")
+        return
     labels = [
         f"{a['account_name']}  ·  {a['attention_score']}  ·  {a['risk_tier']}"
         + ("  ·  shared cliff" if a.get("cliff_cohort") else "")
@@ -798,7 +823,9 @@ def main() -> None:
                     "bound until the shared cause is ruled in or out."
                 )
 
-    with st.expander("Data trust"):
+def render_data_trust(meta: dict, upload_meta: dict | None) -> None:
+    # Its own top-level section: Streamlit cannot nest an expander inside one.
+    with st.expander("Data trust", expanded=False):
         unmatched = meta.get("unmatched_activity_files") or []
         unmatched_names = (
             [u.get("file", str(u)) for u in unmatched] if unmatched else []

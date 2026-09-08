@@ -4,6 +4,9 @@ Internal post-sales triage tool for the Concourse FDE take-home.
 
 **As-of date:** `2026-06-30` (packet dump — not “today”)
 
+**Notes (1-pager):** [NOTES.md](NOTES.md) — design/architecture, then week and quarter findings.
+**Readout (full):** [READOUT.md](READOUT.md) — next week, next quarter, design process, cut list.
+
 ## Quick start
 
 ```bash
