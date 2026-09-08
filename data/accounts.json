@@ -1,7 +1,9 @@
 {
   "meta": {
     "as_of": "2026-06-30",
-    "generated_at": "2026-09-08T01:37:05.984003+00:00",
+    "as_of_source": "last activity date in data (28 later rows ignored as timezone spillover)",
+    "packet_dir": "/Users/cgillespie/Downloads/concoursetakehome/Vibe-Coding/candidate_packet",
+    "generated_at": "2026-09-08T02:07:03.810018+00:00",
     "crm_rows": 56,
     "canonical_accounts": 53,
     "activity_files_ingested": 47,
@@ -185,7 +187,7 @@
       {
         "kind": "export_gap",
         "severity": "high",
-        "headline": "6 accounts ($11,225,000 ARR) have no activity export, but 6 of them still have users logging in",
+        "headline": "6 accounts ($11,225,000 ARR) have no activity export, but all of them still have users logging in",
         "verdict": "Export gap, not dead accounts \u2014 do not read these as zero usage",
         "evidence": [
           "4.8 users logged in per account in the last 30 days, vs 5.5 for accounts that do have export files",
@@ -3228,14 +3230,14 @@
       "seniority_drift": false,
       "stuck_action_items": [
         {
-          "item": "circle back on the expansion pricing question.",
+          "item": "get the security questionnaire back to their team.",
           "occurrences": 3,
           "first_seen": "2025-08-05",
           "last_seen": "2026-06-23",
           "span_days": 322
         },
         {
-          "item": "get the security questionnaire back to their team.",
+          "item": "circle back on the expansion pricing question.",
           "occurrences": 3,
           "first_seen": "2025-08-05",
           "last_seen": "2026-06-23",

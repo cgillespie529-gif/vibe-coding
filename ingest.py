@@ -61,6 +61,10 @@ CLIFF_STEP_WINDOW_DAYS = 7
 CLIFF_CLUSTER_SPREAD_DAYS = 2
 CLIFF_CLUSTER_WINDOW_DAYS = 7
 
+# A day must carry at least this share of the median daily volume to count as
+# the real end of the data, rather than a timezone spillover tail.
+AS_OF_MIN_DAY_SHARE = 0.2
+
 # Who shows up is a seniority signal; losing the economic buyer precedes churn.
 ATTENDEE_LEVELS: list[tuple[re.Pattern[str], int]] = [
     (re.compile(r"full\s+team|whole\s+team", re.I), 4),
@@ -856,6 +860,41 @@ def score_account(a: dict[str, Any]) -> None:
         a["risk_tier"] = "green"
 
 
+def derive_as_of(
+    activity_by_canon: dict[str, pd.DataFrame],
+) -> tuple[datetime | None, str]:
+    """Infer the reporting date from the data rather than the wall clock.
+
+    The last raw timestamp overshoots: exports named for one day carry a thin
+    tail of rows past midnight UTC from evening activity in western timezones.
+    Taking the strict max would report a date the export itself disagrees with,
+    so this uses the last day carrying real volume.
+    """
+    stamps = [df["_ts"].dropna() for df in activity_by_canon.values()]
+    stamps = [s for s in stamps if len(s)]
+    if not stamps:
+        return None, "default (no activity timestamps found)"
+
+    daily = pd.concat(stamps).dt.tz_convert("UTC").dt.date.value_counts().sort_index()
+    if daily.empty:
+        return None, "default (no activity timestamps found)"
+
+    floor = daily.median() * AS_OF_MIN_DAY_SHARE
+    real = daily[daily >= floor]
+    if real.empty:
+        real = daily
+    last = max(real.index)
+    trailing = int(daily[daily.index > last].sum())
+
+    note = "last activity date in data"
+    if trailing:
+        note += f" ({trailing} later rows ignored as timezone spillover)"
+    return (
+        datetime(last.year, last.month, last.day, 23, 59, 59, tzinfo=timezone.utc),
+        note,
+    )
+
+
 def build_findings(accounts: list[dict[str, Any]]) -> list[dict[str, Any]]:
     """Group per-account anomalies into portfolio-level findings.
 
@@ -1004,7 +1043,9 @@ def build_findings(accounts: list[dict[str, Any]]) -> list[dict[str, Any]]:
                 "severity": "high" if alive else "medium",
                 "headline": (
                     f"{len(missing)} accounts (${sum(a['arr'] for a in missing):,.0f} ARR) have no "
-                    f"activity export, but {len(alive)} of them still have users logging in"
+                    "activity export, but "
+                    + ("all of them" if len(alive) == len(missing) else f"{len(alive)} of them")
+                    + " still have users logging in"
                 ),
                 "verdict": (
                     "Export gap, not dead accounts — do not read these as zero usage"
@@ -1037,9 +1078,11 @@ def build_accounts(
 ) -> tuple[list[dict[str, Any]], dict[str, Any]]:
     global PACKET, AS_OF
     PACKET = Path(packet_dir) if packet_dir is not None else DEFAULT_PACKET
+    if as_of is not None and as_of.tzinfo is None:
+        as_of = as_of.replace(tzinfo=timezone.utc)
+    # Provisional: notes and windows below need a value, but the real as-of is
+    # derived from the data once activity is loaded (see set_as_of).
     AS_OF = as_of if as_of is not None else DEFAULT_AS_OF
-    if AS_OF.tzinfo is None:
-        AS_OF = AS_OF.replace(tzinfo=timezone.utc)
 
     if not (PACKET / "crm_export.csv").exists():
         raise FileNotFoundError(f"Missing crm_export.csv in packet: {PACKET}")
@@ -1048,10 +1091,6 @@ def build_accounts(
     member_to_canon, canon_members, canon_flags = build_id_maps(crm)
     seats_raw = load_seats()
     matched_files, unmatched_files, _ = match_activity_files(crm, member_to_canon)
-    notes, note_meta = extract_notes_for_accounts(crm, canon_members)
-
-    w1_start = AS_OF - timedelta(days=WINDOW_DAYS)
-    w0_start = AS_OF - timedelta(days=WINDOW_DAYS * 2)
 
     # Preload + normalize all activity once
     activity_by_canon: dict[str, pd.DataFrame] = {}
@@ -1120,6 +1159,19 @@ def build_accounts(
             schema_variants.add("|".join(sorted(df.columns.astype(str))))
         else:
             still_unmatched.append({"file": path.name, "reason": "no_crm_match"})
+
+    # As-of tracks the data, not the wall clock. A nightly dump loaded days late
+    # would otherwise push every run outside the 30-day window and read as a
+    # portfolio-wide collapse.
+    as_of_source = "caller"
+    if as_of is None:
+        derived, as_of_source = derive_as_of(activity_by_canon)
+        if derived is not None:
+            AS_OF = derived
+
+    notes, note_meta = extract_notes_for_accounts(crm, canon_members)
+    w1_start = AS_OF - timedelta(days=WINDOW_DAYS)
+    w0_start = AS_OF - timedelta(days=WINDOW_DAYS * 2)
 
     accounts: list[dict[str, Any]] = []
     crm_by_id = {r.account_id: r for r in crm.itertuples()}
@@ -1314,6 +1366,8 @@ def build_accounts(
 
     meta = {
         "as_of": AS_OF.date().isoformat(),
+        "as_of_source": as_of_source,
+        "packet_dir": str(PACKET),
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "crm_rows": int(len(crm)),
         "canonical_accounts": len(accounts),

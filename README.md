@@ -66,6 +66,12 @@ Other policies:
 - **Orphan activity:** kept with `no_crm_match` — not dropped
 - **Missing renewal:** score on usage/notes; flag `missing_renewal`
 
+## As-of comes from the data
+
+The reporting date is read off the newest activity in the packet, not the wall clock, so a dump loaded days late does not push every run outside the 30-day window and read as a portfolio-wide collapse. The upload panel defaults to this and shows it read-only; untick **As-of from data** to override.
+
+One wrinkle worth knowing: the strict maximum timestamp is *not* the right answer. Exports named `..._2026-06-30.csv` carry 28 rows past midnight UTC — evening activity in western timezones — so the raw max reads 2026-07-01, a date the export filenames disagree with. `derive_as_of()` instead takes the last day carrying real volume (≥20% of the median daily count), which lands on 2026-06-30 and reports the ignored tail in the header and under **Data trust**.
+
 ## Daily refresh
 
 In the app header, upload either:

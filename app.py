@@ -194,7 +194,7 @@ def apply_accounts_json(upload_bytes: bytes, filename: str) -> None:
     )
 
 
-def apply_packet_zip(upload_bytes: bytes, filename: str, as_of_day: date) -> None:
+def apply_packet_zip(upload_bytes: bytes, filename: str, as_of_day: date | None) -> None:
     with tempfile.TemporaryDirectory() as tmp:
         tmp_path = Path(tmp)
         zip_path = tmp_path / "upload.zip"
@@ -211,8 +211,13 @@ def apply_packet_zip(upload_bytes: bytes, filename: str, as_of_day: date) -> Non
         PACKET_LIVE.mkdir(parents=True, exist_ok=True)
         shutil.copytree(packet_root, PACKET_LIVE, dirs_exist_ok=True)
 
-    as_of = datetime(
-        as_of_day.year, as_of_day.month, as_of_day.day, 23, 59, 59, tzinfo=timezone.utc
+    # None lets the pipeline read the as-of off the data itself
+    as_of = (
+        datetime(
+            as_of_day.year, as_of_day.month, as_of_day.day, 23, 59, 59, tzinfo=timezone.utc
+        )
+        if as_of_day is not None
+        else None
     )
     with st.spinner("Ingesting uploaded packet…"):
         accounts, meta = build_accounts(packet_dir=PACKET_LIVE, as_of=as_of)
@@ -223,15 +228,33 @@ def apply_packet_zip(upload_bytes: bytes, filename: str, as_of_day: date) -> Non
             "uploaded_at": datetime.now(timezone.utc).isoformat(),
             "source_filename": filename,
             "kind": "packet_zip",
-            "as_of": as_of_day.isoformat(),
+            "as_of": meta["as_of"],
+            "as_of_source": meta.get("as_of_source"),
             "canonical_accounts": len(accounts),
             "packet_path": str(PACKET_LIVE),
         }
     )
 
 
-def render_upload_bar() -> None:
-    upload_meta = load_upload_meta()
+def active_upload_meta(meta: dict) -> dict | None:
+    """Upload metadata, but only when it actually describes the loaded dataset.
+
+    Rebuilding from the bundled packet leaves the old upload record on disk,
+    which otherwise keeps advertising a stale filename and as-of date.
+    """
+    um = load_upload_meta()
+    if not um:
+        return None
+    packet_dir = meta.get("packet_dir") or ""
+    if packet_dir and Path(packet_dir) != PACKET_LIVE:
+        return None
+    if um.get("as_of") and meta.get("as_of") and um["as_of"] != meta["as_of"]:
+        return None
+    return um
+
+
+def render_upload_bar(data_as_of: date | None = None, meta: dict | None = None) -> None:
+    upload_meta = active_upload_meta(meta or {})
     with st.container(border=True):
         st.markdown("**Daily data refresh**")
         st.caption(
@@ -248,20 +271,34 @@ def render_upload_bar() -> None:
                 key="data_upload",
             )
         with c2:
+            auto_as_of = st.checkbox(
+                "As-of from data",
+                value=True,
+                help=(
+                    "Reads the reporting date off the newest activity in the upload. "
+                    "Uncheck to set it manually."
+                ),
+            )
             as_of_day = st.date_input(
                 "As-of date",
-                value=date.today(),
-                help="Used for renewal windows and 30d usage when ingesting a packet ZIP.",
+                value=data_as_of or date.today(),
+                disabled=auto_as_of,
+                help="Only used when 'As-of from data' is unchecked.",
             )
+        if auto_as_of:
+            as_of_day = None
 
         if upload_meta:
             st.caption(
-                f"Active upload: **{upload_meta.get('source_filename')}** · "
-                f"as-of **{upload_meta.get('as_of') or '—'}** · "
+                f"Active data: **{upload_meta.get('source_filename')}** · "
+                f"as-of **{data_as_of or '—'}** · "
                 f"loaded {upload_meta.get('uploaded_at', '')[:19].replace('T', ' ')} UTC"
             )
         else:
-            st.caption("No upload yet — using bundled `data/accounts.json` if present.")
+            st.caption(
+                f"Using the bundled packet · as-of **{data_as_of or '—'}** "
+                "· upload a ZIP to replace it."
+            )
 
         apply = st.button("Apply upload", type="primary", disabled=uploaded is None)
         if apply and uploaded is not None:
@@ -339,27 +376,35 @@ def render_findings(findings: list[dict]) -> None:
 
 def main() -> None:
     st.title("Account Attention Hub")
-    render_upload_bar()
 
+    # Load first so the upload bar can show the dataset's real as-of instead of
+    # today's date — one as-of value on the screen, taken from the data.
     mtime = DATA_PATH.stat().st_mtime if DATA_PATH.exists() else 0.0
     data = load_data(mtime)
+    meta = (data or {}).get("meta", {})
+    data_as_of = None
+    if meta.get("as_of"):
+        try:
+            data_as_of = date.fromisoformat(meta["as_of"])
+        except ValueError:
+            data_as_of = None
+
+    render_upload_bar(data_as_of, meta)
+
     if data is None:
         st.error("No active dataset yet. Upload a packet ZIP or accounts.json above.")
         st.stop()
 
-    meta = data["meta"]
     accounts = data["accounts"]
-    upload_meta = load_upload_meta()
+    upload_meta = active_upload_meta(meta)
 
     caption_bits = [
         f"As-of **{meta['as_of']}**",
         f"{meta['canonical_accounts']} canonical accounts",
         "batch export only",
     ]
-    if upload_meta and upload_meta.get("uploaded_at"):
-        caption_bits.append(
-            f"last upload {upload_meta['uploaded_at'][:19].replace('T', ' ')} UTC"
-        )
+    if meta.get("as_of_source"):
+        caption_bits.append(f"as-of from {meta['as_of_source']}")
     st.caption(" · ".join(caption_bits))
 
     # Portfolio summary
@@ -547,10 +592,17 @@ def main() -> None:
     d1.metric("ARR", fmt_arr(acct["arr"]))
     has_usage = acct.get("usage_data_available", True)
     if has_usage:
+        # Signed percentage so the arrow and colour follow the actual direction.
+        # A "prior N" label reads as non-negative and renders green-up on a decline.
+        pct = acct.get("usage_delta_pct")
         d2.metric(
             "Runs 30d",
             acct.get("runs_30d", 0),
-            delta=f"prior {acct.get('runs_prior_30d', 0)}",
+            delta=(
+                f"{pct:+.1f}% vs prior 30d ({acct.get('runs_prior_30d', 0)})"
+                if pct is not None
+                else None
+            ),
         )
         err = acct.get("error_rate_30d")
         d4.metric("Error rate 30d", f"{err:.0%}" if err is not None else "—")
@@ -610,7 +662,7 @@ def main() -> None:
 - **Usage:** low or falling real-user usage → more points
 - **Reliability:** higher run failure rate → more points
 - **Seat adoption:** fewer licensed seats active, or bot-heavy traffic → more points
-- **Call-note risk:** allowlisted risks or open action items in notes → more points
+- **Relationship health:** slipping meeting cadence, CSM turnover, less senior attendees, or action items still open across several meetings → more points
 - **Stage:** still onboarding with weak usage → more points
 """
             )
@@ -759,8 +811,13 @@ def main() -> None:
         labeled_rows(
             [
                 ("As-of", meta.get("as_of")),
-                ("Last upload", (upload_meta or {}).get("uploaded_at")),
-                ("Upload source", (upload_meta or {}).get("source_filename")),
+                ("How as-of was set", meta.get("as_of_source")),
+                (
+                    "Data source",
+                    (upload_meta or {}).get("source_filename")
+                    or "bundled candidate_packet",
+                ),
+                ("Last upload", (upload_meta or {}).get("uploaded_at") or "—"),
                 ("Activity files ingested", meta.get("activity_files_ingested")),
                 ("Schema variants handled", meta.get("schema_variants")),
                 ("Unmatched activity files", unmatched_names),
